@@ -1,7 +1,8 @@
 import dayjs from "dayjs";
-import { Button, ConfirmationDialog, DatePicker, Div_AppsLayout, Div_DialogWidgetButtons, Div_DialogWidgetContent, Div_DialogWidgetTitle, Div_Header, Div_HeaderAppBar, Div_HeaderToolbar, Divider, GridFlexContainer, GridItem, Input, LYDarkModeIcon, LYLogoIcon, Main_Content, Select, Typo_AppsName, Typography } from "liberty-core"; // Import your reusable component
+import { Button, ConfirmationDialog, DatePicker, Div_AppsLayout, Div_DialogWidgetButtons, Div_DialogWidgetContent, Div_DialogWidgetTitle, Div_Header, Div_HeaderAppBar, Div_HeaderToolbar, Div_InputChat, Divider, GridFlexContainer, GridItem, Input, InputCheckbox, InputFile, LYDarkModeIcon, LYLogoIcon, Main_Content, Select, Typo_AppsName, Typography } from "liberty-core"; // Import your reusable component
 import { useTheme } from "liberty-core";
-import { SyntheticEvent, useCallback, useState } from "react";
+import { ISnackMessage } from "liberty-core/dist/types/lySnackMessages";
+import { SyntheticEvent, useCallback, useRef, useState } from "react";
 
 const App = () => {
   const { darkMode, toggleDarkMode } = useTheme();
@@ -34,6 +35,15 @@ const App = () => {
 
   const [inputValue, setInputValue] = useState<string>("");
   const [inputDate, setInputDate] = useState<string>("");
+  const [inputCheckbox, setInputCheckbox] = useState<boolean>(false);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  const handleSnackMessage = (message: ISnackMessage) => {
+    console.log("Snack Message:", message);
+    console.log("File Size:", selectedFile?.size);
+    // Here, you could update state, dispatch an action, or show a notification component.
+  };
 
   return (
     <Div_AppsLayout>
@@ -107,11 +117,11 @@ const App = () => {
               showClearButton={true}
               selectOnly
             />
-            </GridItem>
-                      <GridItem
+          </GridItem>
+          <GridItem
             style={{ flexGrow: 0 }}
             size={12}
-            key="grid-item-2"
+            key="grid-item-3"
           >
             <DatePicker
               // Initialize the picker with the current cell value
@@ -121,8 +131,31 @@ const App = () => {
               onChange={(date) => setInputDate(date ? date.format('YYYY-MM-DD') : '')}
             />
           </GridItem>
+          <GridItem
+            style={{ flexGrow: 0 }}
+            size={12}
+            key="grid-item-4"
+          >
+            <InputCheckbox
+              id={`input-checkbox-1`}
+              key={`input-checkbox-1`}
+              label="This is a checkbox"
+              defaultValue={inputCheckbox}
+              disabled={false}
+              onChange={(event: any) => setInputCheckbox(event.value)}
+            />
+          </GridItem>
         </GridFlexContainer>
-
+        <Div_InputChat>
+        <InputFile
+          onFileChange={e => setSelectedFile(e.target.files?.[0] ?? null)}
+          fileInputRef={fileInputRef}
+          disabled={false}
+          accept=".jpg,.png,.pdf"
+          snackMessage={handleSnackMessage} 
+        />
+        <Typography>Upload a file</Typography>
+        </Div_InputChat>
       </Main_Content>
       <ConfirmationDialog
         open={openSaveDialog}
