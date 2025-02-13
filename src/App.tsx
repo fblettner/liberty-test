@@ -1,4 +1,4 @@
-import { Button, ConfirmationDialog, Div_AppsLayout, Div_Header, Div_HeaderAppBar, Div_HeaderToolbar, Divider, Input, LYDarkModeIcon, LYLogoIcon, Main_Content, Select, Typo_AppsName } from "liberty-core"; // Import your reusable component
+import { Button, ConfirmationDialog, Div_AppsLayout, Div_DialogWidgetButtons, Div_DialogWidgetContent, Div_DialogWidgetTitle, Div_Header, Div_HeaderAppBar, Div_HeaderToolbar, Divider, GridFlexContainer, GridItem, Input, LYDarkModeIcon, LYLogoIcon, Main_Content, Select, Typo_AppsName, Typography } from "liberty-core"; // Import your reusable component
 import { useTheme } from "liberty-core";
 import { SyntheticEvent, useCallback, useState } from "react";
 
@@ -25,8 +25,8 @@ const App = () => {
   }, [selectedOption]);
 
   const [openSaveDialog, setOpenSaveDialog] = useState(false);
-  const handleDiscardConfirm = useCallback(() => {setOpenSaveDialog(true) }, [setOpenSaveDialog]);
-  const handleDiscardDecline = useCallback(() => {setOpenSaveDialog(false) }, [setOpenSaveDialog]);
+  const handleDiscardConfirm = useCallback(() => { setOpenSaveDialog(true) }, [setOpenSaveDialog]);
+  const handleDiscardDecline = useCallback(() => { setOpenSaveDialog(false) }, [setOpenSaveDialog]);
   const handleDiscardAccept = useCallback(() => { setOpenSaveDialog(false) }, [setOpenSaveDialog]
   );
 
@@ -42,12 +42,14 @@ const App = () => {
           </Div_Header>
         </Div_HeaderToolbar>
       </Div_HeaderAppBar>
-      <p>Current Mode: {darkMode ? "Dark" : "Light"}</p>
-      <Divider/>
+      <Divider />
+      <Div_DialogWidgetTitle>
+        <Typography>Current Mode: {darkMode ? "Dark" : "Light"}</Typography>
+      </Div_DialogWidgetTitle>
+      <Divider />
       <Main_Content>
         {/* Theme Toggle */}
-        <div style={{ marginTop: "20px" }}>
-
+        <Div_DialogWidgetButtons>
           <Button
             disabled={false}
             variant="outlined" // Use 'outlined' for a modern, clean look
@@ -56,40 +58,6 @@ const App = () => {
           >
             Toggle Dark Mode
           </Button>
-          <Button
-            disabled={false}
-            variant="contained" // Use 'outlined' for a modern, clean look
-            startIcon={LYDarkModeIcon}
-            onClick={toggleDarkMode}
-          >
-            Toggle Dark Mode
-          </Button>
-        </div>
-
-        <Input
-          variant="standard"
-          required
-          fullWidth
-          id="input-value-1"
-          label="Enter a value"
-          name="input-value"
-          autoComplete="input-value"
-          disabled={false}
-          onChange={onFieldChange}
-        />
-
-        <Select
-          label="Select a value"
-          id={`select-value-1`}
-          value={selectedOption}
-          onChange={onInputChange}
-          variant='standard'
-          options={selectOptions}
-          disablePortal={false}
-          fullWidth
-          showClearButton={true}
-          selectOnly
-        />
           <Button
             disabled={false}
             variant="outlined" // Use 'outlined' for a modern, clean look
@@ -97,6 +65,57 @@ const App = () => {
           >
             Open confirmation dialog
           </Button>
+        </Div_DialogWidgetButtons>
+        <GridFlexContainer key="form-grid-1" spacing={4} px={2} py={2}>
+          <GridItem
+            style={{ flexGrow: 0 }}
+            size={12}
+            key="grid-item-1"
+          >
+            <form
+              style={{ height: "100%", width: "100%" }}
+              id={`dialog-form-item-1`}
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <Input
+                variant="standard"
+                required
+                fullWidth
+                id="input-value-1"
+                label="Enter a value"
+                name="input-value"
+                autoComplete="input-value"
+                disabled={false}
+                onChange={onFieldChange}
+              />
+            </form>
+          </GridItem>
+          <GridItem
+            style={{ flexGrow: 0 }}
+            size={12}
+            key="grid-item-2"
+          >
+            <form
+              style={{ height: "100%", width: "100%" }}
+              id={`dialog-form-item-2`}
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <Select
+                label="Select a value"
+                id={`select-value-1`}
+                value={selectedOption}
+                onChange={onInputChange}
+                variant='standard'
+                options={selectOptions}
+                disablePortal={false}
+                fullWidth
+                showClearButton={true}
+                selectOnly
+              />
+            </form>
+          </GridItem>
+        </GridFlexContainer>
+
       </Main_Content>
       <ConfirmationDialog
         open={openSaveDialog}
