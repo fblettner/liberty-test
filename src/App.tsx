@@ -1,12 +1,20 @@
 import dayjs from "dayjs";
-import { Button, ConfirmationDialog, DatePicker, Div_AppsLayout, Div_DialogWidgetButtons, Div_DialogWidgetContent, Div_DialogWidgetTitle, Div_Header, Div_HeaderAppBar, Div_HeaderToolbar, Div_InputChat, Divider, GridFlexContainer, GridItem, Input, InputCheckbox, InputFile, LYDarkModeIcon, LYLogoIcon, Main_Content, Select, Typo_AppsName, Typography } from "liberty-core"; // Import your reusable component
+import {
+  Button, ConfirmationDialog, DatePicker, Div_AppsLayout, Div_DialogWidgetButtons,
+  Div_DialogWidgetTitle, Div_Header, Div_HeaderAppBar, Div_HeaderToolbar, Div_InputChat, Divider, EApplications, ESessionMode, EUsers, GridFlexContainer, GridItem,
+  Input, InputCheckbox, InputEnum, InputFile, LYDarkModeIcon, LYLogoIcon, Main_Content, Select, Typo_AppsName, Typography,
+  UIDisplayMode
+}
+  from "liberty-core";
 import { useTheme } from "liberty-core";
 import { ISnackMessage } from "liberty-core/dist/types/lySnackMessages";
 import { SyntheticEvent, useCallback, useRef, useState } from "react";
+import { modulesProperties } from "./data/modules";
+import { setCustomGetEnums } from "./data/enum";
+
 
 const App = () => {
   const { darkMode, toggleDarkMode } = useTheme();
-
 
   const onFieldChange = useCallback((_event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(_event.target.value);
@@ -44,6 +52,41 @@ const App = () => {
     console.log("File Size:", selectedFile?.size);
     // Here, you could update state, dispatch an action, or show a notification component.
   };
+
+  const onAutocompleteChanged = useCallback((event: any) => {
+    console.log("Selected value:", event);
+  }, []);
+
+  const appsProperties = {
+    [EApplications.id]: 0,
+    [EApplications.pool]: "default",
+    [EApplications.name]: "LIBERTY",
+    [EApplications.description]: "Liberty Framework",
+    [EApplications.offset]: 5000,
+    [EApplications.limit]: 5000,
+    [EApplications.version]: "DEMO",
+    [EApplications.session]: ESessionMode.session,
+    [EApplications.dashboard]: -1,
+    [EApplications.theme]: "liberty",
+    [EApplications.jwt_token]: ""
+  }
+
+  const userProperties = {
+    [EUsers.status]: false,
+    [EUsers.id]: "",
+    [EUsers.name]: "",
+    [EUsers.email]: "",
+    [EUsers.password]: "",
+    [EUsers.admin]: "N",
+    [EUsers.language]: "en",
+    [EUsers.displayMode]: UIDisplayMode.dark,
+    [EUsers.darkMode]: true,
+    [EUsers.theme]: "liberty",
+    [EUsers.dashboard]: -1,
+    [EUsers.readonly]: "Y",
+  }
+
+  setCustomGetEnums()
 
   return (
     <Div_AppsLayout>
@@ -145,16 +188,58 @@ const App = () => {
               onChange={(event: any) => setInputCheckbox(event.value)}
             />
           </GridItem>
+          <GridItem
+            style={{ flexGrow: 0 }}
+            size={12}
+            key="grid-item-5"
+          >
+            <InputEnum
+              id="input-enum-1"
+              key="input-enum-1"
+              enumID={0}
+              label="Dictionary Rules"
+              defaultValue=''
+              disabled={false}
+              onChange={onAutocompleteChanged}
+              variant="standard"
+              freeSolo={true}
+              searchByLabel={false}
+              appsProperties={appsProperties}
+              userProperties={userProperties}
+              modulesProperties={modulesProperties}
+            />
+          </GridItem>
+          <GridItem
+            style={{ flexGrow: 0 }}
+            size={12}
+            key="grid-item-6"
+          >
+            <InputEnum
+              id="input-enum-1"
+              key="input-enum-1"
+              enumID={1}
+              label="Dictionary Types"
+              defaultValue=''
+              disabled={false}
+              onChange={onAutocompleteChanged}
+              variant="standard"
+              freeSolo={true}
+              searchByLabel={false}
+              appsProperties={appsProperties}
+              userProperties={userProperties}
+              modulesProperties={modulesProperties}
+            />
+          </GridItem>
         </GridFlexContainer>
         <Div_InputChat>
-        <InputFile
-          onFileChange={e => setSelectedFile(e.target.files?.[0] ?? null)}
-          fileInputRef={fileInputRef}
-          disabled={false}
-          accept=".jpg,.png,.pdf"
-          snackMessage={handleSnackMessage} 
-        />
-        <Typography>Upload a file</Typography>
+          <InputFile
+            onFileChange={e => setSelectedFile(e.target.files?.[0] ?? null)}
+            fileInputRef={fileInputRef}
+            disabled={false}
+            accept=".jpg,.png,.pdf"
+            snackMessage={handleSnackMessage}
+          />
+          <Typography>Upload a file</Typography>
         </Div_InputChat>
       </Main_Content>
       <ConfirmationDialog
