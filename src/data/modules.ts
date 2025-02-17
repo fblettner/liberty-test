@@ -1,26 +1,51 @@
-export const modulesProperties = {
-    "debug": {
-        "enabled": false,
-        "params": null
-    },
-    "sentry": {
-        "enabled": false,
-        "params": ""
-    },
-    "login": {
-        "enabled": true,
-        "params": null
-    },
-    "menus": {
-        "enabled": true,
-        "params": null
-    },
-    "grafana": {
-        "enabled": false,
-        "params": null
-    },
-    "dev": {
-        "enabled": true,
-        "params": null
-    }
-}
+export const modulesProperties = [{
+    "items": [
+        {
+            "MODULE_ID": "menus",
+            "MODULE_DESCRIPTION": "Enable Drawer Menus",
+            "MODULE_ENABLED": "Y",
+            "MODULE_PARAMS": null
+        },
+        {
+            "MODULE_ID": "dev",
+            "MODULE_DESCRIPTION": "Enable Development Mode",
+            "MODULE_ENABLED": "Y",
+            "MODULE_PARAMS": null
+        },
+        {
+            "MODULE_ID": "grafana",
+            "MODULE_DESCRIPTION": "Enable Grafana Dashboard",
+            "MODULE_ENABLED": "N",
+            "MODULE_PARAMS": null
+        },
+        {
+            "MODULE_ID": "AI",
+            "MODULE_DESCRIPTION": "Enable AI",
+            "MODULE_ENABLED": "Y",
+            "MODULE_PARAMS": null
+        },
+        {
+            "MODULE_ID": "debug",
+            "MODULE_DESCRIPTION": "Enable Debug",
+            "MODULE_ENABLED": "N",
+            "MODULE_PARAMS": null
+        },
+        {
+            "MODULE_ID": "sentry",
+            "MODULE_DESCRIPTION": "Enable Sentry",
+            "MODULE_ENABLED": "N",
+            "MODULE_PARAMS": null
+        },
+        {
+            "MODULE_ID": "login",
+            "MODULE_DESCRIPTION": "Enable Embedded Login",
+            "MODULE_ENABLED": "Y",
+            "MODULE_PARAMS": null
+        }
+    ],
+    "status": "success",
+}];
+
+export const customGetModules = async () => {
+    return modulesProperties
+  };
