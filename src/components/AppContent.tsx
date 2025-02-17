@@ -1,18 +1,26 @@
 import dayjs from "dayjs";
 import {
-  AppProvider,
+  AppsHeader,
   Button, ConfirmationDialog, DatePicker, Div_AppsLayout, Div_DialogWidgetButtons,
-  Div_DialogWidgetTitle, Div_Header, Div_HeaderAppBar, Div_HeaderToolbar, Div_InputChat, Divider, GridFlexContainer, GridItem,
-  Input, InputCheckbox, InputEnum, InputFile, LYDarkModeIcon, LYLogoIcon, Main_Content, Select, Typo_AppsName, Typography,
-  }
+  Div_DialogWidgetTitle, Div_InputChat, Divider, EApplications, GridFlexContainer, GridItem,
+  Input, InputCheckbox, InputEnum, InputFile,  Main_Content, Select, Typography,
+  useAppContext,
+  useMediaQuery,
+}
   from "liberty-core";
 import { useTheme } from "liberty-core";
-import { SyntheticEvent, useCallback, useRef, useState } from "react";
+import { SyntheticEvent, useCallback, useEffect, useRef, useState } from "react";
 import { setCustomGetEnums } from "../data/enum";
-import { getModules } from "../data/modules";
+import { connectedApps } from "../data/applications";
 
 const App = () => {
   const { darkMode, toggleDarkMode } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUserOpen, setIsUserOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [isDarkMode, setIsDarkMode] = useState(prefersDarkMode);
+
 
   const onFieldChange = useCallback((_event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(_event.target.value);
@@ -51,20 +59,47 @@ const App = () => {
 
 
   setCustomGetEnums()
+  const onToggleMenusDrawer = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  const onToggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    toggleDarkMode();
+  }
+
+  const onToggleUserSettings = () => {
+    setIsUserOpen(!isUserOpen);
+  }
+
+  const onToggleChat = () => {
+    setIsChatOpen(!isChatOpen);
+  }
+
+  const onSignout = () => {
+    setIsChatOpen(false)
+  }
+
+  const { appsProperties, setAppsProperties } = useAppContext();
+  useEffect(() => {
+    // Define new application properties
+        // Update state only if appsProperties are not already set
+    if (!appsProperties || appsProperties[EApplications.id] !== connectedApps[EApplications.id]) {
+      setAppsProperties(connectedApps);
+    }
+  }, [appsProperties, setAppsProperties]);
 
   return (
-    <AppProvider getModules={getModules}>
+
       <Div_AppsLayout>
-        <Div_HeaderAppBar>
-          <Div_HeaderToolbar>
-            <Div_Header>
-              <LYLogoIcon width="32px" height="32px" />
-              <Typo_AppsName noWrap>
-                Testing Liberty Core Components
-              </Typo_AppsName>
-            </Div_Header>
-          </Div_HeaderToolbar>
-        </Div_HeaderAppBar>
+        <AppsHeader
+          onToggleMenusDrawer={onToggleMenusDrawer}
+          onToggleDarkMode={onToggleDarkMode}
+          darkMode={isDarkMode}
+          onToggleChat={onToggleChat}
+          onToggleUserSettings={onToggleUserSettings}
+          onSignout={onSignout}
+        />
         <Divider />
         <Div_DialogWidgetTitle>
           <Typography>Current Mode: {darkMode ? "Dark" : "Light"}</Typography>
@@ -73,14 +108,6 @@ const App = () => {
         <Main_Content>
           {/* Theme Toggle */}
           <Div_DialogWidgetButtons>
-            <Button
-              disabled={false}
-              variant="outlined" // Use 'outlined' for a modern, clean look
-              startIcon={LYDarkModeIcon}
-              onClick={toggleDarkMode}
-            >
-              Toggle Dark Mode
-            </Button>
             <Button
               disabled={false}
               variant="outlined" // Use 'outlined' for a modern, clean look
@@ -210,7 +237,6 @@ const App = () => {
         />
 
       </Div_AppsLayout>
-    </AppProvider>
   )
 };
 

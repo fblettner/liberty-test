@@ -3,15 +3,22 @@
  * All rights reserved. Use is subject to license terms.
  * *
  */
-import { AppProvider } from 'liberty-core';
+import { AppProvider, LYThemeProvider } from 'liberty-core';
 import AppContent from './components/AppContent';
+import { getModules } from './data/modules';
+import { getApplications } from './data/applications';
 
 
 export function App() {
 
   return (
-    <AppProvider>
-      <AppContent />
+    <AppProvider
+      getModules={getModules}
+      getApplications={getApplications}
+    >
+      <LYThemeProvider>
+        <AppContent />
+      </LYThemeProvider>
     </AppProvider>
   );
 }
