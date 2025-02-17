@@ -46,6 +46,6 @@ export const modulesProperties = [{
     "status": "success",
 }];
 
-export const customGetModules = async () => {
+export const getModules = async () => {
     return modulesProperties
   };

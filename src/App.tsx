@@ -9,7 +9,7 @@ import {
 import { useTheme } from "liberty-core";
 import { SyntheticEvent, useCallback, useRef, useState } from "react";
 import { setCustomGetEnums } from "./data/enum";
-import { customGetModules } from "./data/modules";
+import { getModules } from "./data/modules";
 
 
 const App = () => {
@@ -54,7 +54,7 @@ const App = () => {
   setCustomGetEnums()
 
   return (
-    <AppProvider getModules={customGetModules}>
+    <AppProvider getModules={getModules}>
       <Div_AppsLayout>
         <Div_HeaderAppBar>
           <Div_HeaderToolbar>
