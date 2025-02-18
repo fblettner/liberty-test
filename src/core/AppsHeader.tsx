@@ -58,7 +58,7 @@ export const AppHeaderExample = () => {
 \`\`\`
 
 # Component Preview
-Below is an interactive example demonstrating the Button component.
+Below is an interactive example demonstrating the \`AppsHeader\` component.
 `;
 
 export const Core_AppsHeader = () => {

@@ -57,7 +57,7 @@ export const ButtonExample = () => {
 \`\`\`
 
 # Component Preview
-Below is an interactive example demonstrating the Button component.
+Below is an interactive example demonstrating the \`Button\` component.
 `;
 
 export const Core_Button = () => {
