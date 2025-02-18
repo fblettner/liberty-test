@@ -9,6 +9,7 @@ import { Core_CircularProgress } from "../core/CircularProgress";
 import { Core_Collapse } from "../core/Collapse";
 import { Core_ConfirmationDialog } from "../core/ConfirmationDialog";
 import { Core_Dialog } from "../core/Dialog";
+import { Core_DialogExport } from "../core/DialogExport";
 
 export const menus = {
     "items": [
@@ -179,7 +180,21 @@ export const menus = {
                     "DYNAMIC_PARAMS": null,
                     "FIXED_PARAMS": null,
                     "MENU_CONTENT": <Core_Dialog />
-                },                       
+                },      
+                {
+                    "LNG_ID": "en",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 11,
+                    "MENU_LABEL": "Dialog Export",
+                    "KEY_ATTRIBUTES": "100002.100010.",
+                    "MENU_PARENT_ID": "100002.",
+                    "MENU_CHILD_ID": "100002.100010.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "DYNAMIC_PARAMS": null,
+                    "FIXED_PARAMS": null,
+                    "MENU_CONTENT": <Core_DialogExport />
+                },                                     
             ]
         }        
     ],

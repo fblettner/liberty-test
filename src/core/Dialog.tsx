@@ -23,7 +23,7 @@ The \`Dialog\` component is a modal dialog that appears over the main content. I
 | \`maxWidth\`        | \`string\`                | \`"600px"\`  | The maximum width of the dialog.                |
 | \`disableBackdropClick\` | \`boolean\`         | \`false\`    | Prevents closing when clicking the backdrop.     |
 | \`closeOnEsc\`      | \`boolean\`               | \`true\`     | Allows closing the dialog by pressing ESC.       |
-| \`scroll\`          | \`"paper" | "body"\`      | \`"paper"\`  | Controls the scrolling behavior inside the dialog. |
+| \`scroll\`          | \`"paper" , "body"\`      | \`"paper"\`  | Controls the scrolling behavior inside the dialog. |
 
 ## Example Usage
 \`\`\`tsx
