@@ -3,7 +3,7 @@
  * All rights reserved. Use is subject to license terms.
  * *
  */
-import { AppProvider, AuthProviderWrapper, LYThemeProvider } from 'liberty-core';
+import { AppProvider, LYThemeProvider } from 'liberty-core';
 import AppContent from './components/AppContent';
 import { getModules } from './data/modules';
 import { getApplications } from './data/applications';
@@ -22,11 +22,9 @@ export function App() {
       getUser={getUser}
       getMenus={getMenus}
     >
-      <AuthProviderWrapper>
         <LYThemeProvider>
           <AppContent />
         </LYThemeProvider>
-      </AuthProviderWrapper>
     </AppProvider>
 
   );
