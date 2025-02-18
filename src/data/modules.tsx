@@ -1,5 +1,4 @@
-export const modulesProperties = [{
-    "items": [
+export const modulesProperties = [
         {
             "MODULE_ID": "menus",
             "MODULE_DESCRIPTION": "Enable Drawer Menus",
@@ -42,9 +41,7 @@ export const modulesProperties = [{
             "MODULE_ENABLED": "Y",
             "MODULE_PARAMS": null
         }
-    ],
-    "status": "success",
-}];
+];
 
 export const getModules = async () => {
     return modulesProperties

@@ -3,10 +3,13 @@
  * All rights reserved. Use is subject to license terms.
  * *
  */
-import { AppProvider, LYThemeProvider } from 'liberty-core';
+import { AppProvider, AuthProviderWrapper, LYThemeProvider } from 'liberty-core';
 import AppContent from './components/AppContent';
 import { getModules } from './data/modules';
 import { getApplications } from './data/applications';
+import { getToken } from './data/token';
+import { getUser } from './data/user';
+import { getMenus } from './data/menus';
 
 
 export function App() {
@@ -15,11 +18,17 @@ export function App() {
     <AppProvider
       getModules={getModules}
       getApplications={getApplications}
+      getToken={getToken}
+      getUser={getUser}
+      getMenus={getMenus}
     >
-      <LYThemeProvider>
-        <AppContent />
-      </LYThemeProvider>
+      <AuthProviderWrapper>
+        <LYThemeProvider>
+          <AppContent />
+        </LYThemeProvider>
+      </AuthProviderWrapper>
     </AppProvider>
+
   );
 }
 
