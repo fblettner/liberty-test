@@ -17,6 +17,11 @@ const markdownContent = `
 - 🔌 **Extensibility**: Easily add and configure new modules.
 - 🌐 **Integrated State Management**: Built-in context for handling global application state.
 
+### Backend Integration
+Liberty Core is designed to seamlessly integrate with the Liberty Framework, which includes a FastAPI-based backend powered by PostgreSQL. This backend provides a preconfigured database and a complete set of ready-to-use APIs, allowing developers to focus on building applications without worrying about backend setup.
+
+- 🔗 Backend Repository: Liberty Framework
+
 ## Documentation Structure
 The documentation is divided into the following categories:
 

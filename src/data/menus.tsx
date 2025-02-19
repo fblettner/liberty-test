@@ -1,6 +1,6 @@
 import { LYComponentType } from "liberty-core";
 import { Core_Alert } from "../core/Alert";
-import { Core_AppsHeader } from "../liberty/AppsHeader";
+import { Core_AppsHeader } from "../main/AppsHeader";
 import { Core_Button } from "../core/Button";
 import { Core_Card } from "../core/Card";
 import { Core_Checkbox } from "../core/Checkbox";
@@ -45,6 +45,10 @@ import { Core_InputEnum } from "../input/InputEnum";
 import { Core_BarChart } from "../charts/BarChart";
 import { Core_LineChart } from "../charts/LineChart";
 import { Core_PieChart } from "../charts/PieChart";
+import { Core_AppsContent } from "../main/AppsContent";
+import { Core_AppsLogin } from "../main/AppsLogin";
+import { Core_AppsMenus } from "../main/AppsMenus";
+import { Core_AppsUser } from "../main/AppsUsers";
 
 export const menus = {
     "items": [
@@ -281,7 +285,7 @@ export const menus = {
         },
         {
             "LNG_ID": "en",
-            "MENU_LABEL": "Liberty Components",
+            "MENU_LABEL": "Main Components",
             "MENU_COMPONENT": null,
             "MENU_COMPONENT_ID": null,
             "KEY_ATTRIBUTES": "100003.",
@@ -300,9 +304,9 @@ export const menus = {
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_AppsHeader />
-                },
+                },     
                 {
-                    "MENU_LABEL": "Dashboard",
+                    "MENU_LABEL": "Content",
                     "MENU_COMPONENT": LYComponentType.FormsContent,
                     "MENU_COMPONENT_ID": 60002,
                     "KEY_ATTRIBUTES": "100003.100002.",
@@ -310,11 +314,67 @@ export const menus = {
                     "MENU_CHILD_ID": "100003.100002.",
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_AppsContent />
+                },    
+                {
+                    "MENU_LABEL": "Login",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 60003,
+                    "KEY_ATTRIBUTES": "100003.100003.",
+                    "MENU_PARENT_ID": "100003.",
+                    "MENU_CHILD_ID": "100003.100003.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_AppsLogin />
+                },   
+                {
+                    "MENU_LABEL": "Menus",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 60004,
+                    "KEY_ATTRIBUTES": "100003.100004.",
+                    "MENU_PARENT_ID": "100003.",
+                    "MENU_CHILD_ID": "100003.100004.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_AppsMenus />
+                },  
+                {
+                    "MENU_LABEL": "Users",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 60005,
+                    "KEY_ATTRIBUTES": "100003.100005.",
+                    "MENU_PARENT_ID": "100003.",
+                    "MENU_CHILD_ID": "100003.100005.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_AppsUser />
+                },                                                            
+            ]
+        },      
+        {
+            "LNG_ID": "en",
+            "MENU_LABEL": "Forms Components",
+            "MENU_COMPONENT": null,
+            "MENU_COMPONENT_ID": null,
+            "KEY_ATTRIBUTES": "100004.",
+            "MENU_PARENT_ID": "0",
+            "MENU_CHILD_ID": "100004.",
+            "MENU_LEVEL": 1,
+            "AUT_RUN": "Y",
+            "children": [                                 
+                {
+                    "MENU_LABEL": "Dashboard",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 70001,
+                    "KEY_ATTRIBUTES": "100004.100001.",
+                    "MENU_PARENT_ID": "100004.",
+                    "MENU_CHILD_ID": "100004.100001.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_Dashboard />
                 },                
             ]
-        },      
-           
+        },             
     ],
     status: "success"
 };
