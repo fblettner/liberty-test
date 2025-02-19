@@ -10,6 +10,11 @@ import { Core_List } from "../core/List";
 import { Core_Popper } from "../core/Popper";
 import { Core_Select } from "../core/Select";
 import { Core_Table } from "../core/Table";
+import { Core_AppProvider } from "../context/AppProvider";
+import { Core_Modules } from "../services/Modules";
+import { Core_Applications } from "../services/Applications";
+import { Core_Users } from "../services/Users";
+import { Core_Authentication } from "../services/Authentication";
 
 export const menus = {
     "items": [
@@ -25,7 +30,7 @@ export const menus = {
             "AUT_RUN": "Y",
             "children": [
                 {
-                    "MENU_LABEL": "Header",
+                    "MENU_LABEL": "AppProvider",
                     "MENU_COMPONENT": LYComponentType.FormsContent,
                     "MENU_COMPONENT_ID": 1,
                     "KEY_ATTRIBUTES": "100001.100001.",
@@ -33,8 +38,52 @@ export const menus = {
                     "MENU_CHILD_ID": "100001.100001.",
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
-                    "MENU_CONTENT": <Core_AppsHeader />
+                    "MENU_CONTENT": <Core_AppProvider />
                 },
+                {
+                    "MENU_LABEL": "Modules",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 2,
+                    "KEY_ATTRIBUTES": "100001.100002.",
+                    "MENU_PARENT_ID": "100001.",
+                    "MENU_CHILD_ID": "100001.100002.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_Modules />
+                },        
+                {
+                    "MENU_LABEL": "Applications",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 3,
+                    "KEY_ATTRIBUTES": "100001.100003.",
+                    "MENU_PARENT_ID": "100001.",
+                    "MENU_CHILD_ID": "100001.100003.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_Applications />
+                },        
+                {
+                    "MENU_LABEL": "Users",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 4,
+                    "KEY_ATTRIBUTES": "100001.100004.",
+                    "MENU_PARENT_ID": "100001.",
+                    "MENU_CHILD_ID": "100001.100004.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_Users />
+                },       
+                {
+                    "MENU_LABEL": "Authentication",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 5,
+                    "KEY_ATTRIBUTES": "100001.100005.",
+                    "MENU_PARENT_ID": "100001.",
+                    "MENU_CHILD_ID": "100001.100005.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_Authentication />
+                },                                                  
             ]
         },
         {
@@ -107,7 +156,31 @@ export const menus = {
                     ]
                 }
             ]
-        }
+        },
+        {
+            "LNG_ID": "en",
+            "MENU_LABEL": "UI",
+            "MENU_COMPONENT": null,
+            "MENU_COMPONENT_ID": null,
+            "KEY_ATTRIBUTES": "100003.",
+            "MENU_PARENT_ID": "0",
+            "MENU_CHILD_ID": "100003.",
+            "MENU_LEVEL": 1,
+            "AUT_RUN": "Y",
+            "children": [                                 
+                {
+                    "MENU_LABEL": "Header",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 4,
+                    "KEY_ATTRIBUTES": "100003.100001.",
+                    "MENU_PARENT_ID": "100003.",
+                    "MENU_CHILD_ID": "100003.100001.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_AppsHeader />
+                },
+            ]
+        },        
     ],
     status: "success"
 };
