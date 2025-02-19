@@ -11,6 +11,7 @@ import { getToken } from './data/token';
 import { getUser } from './data/user';
 import { getMenus } from './data/menus';
 import { theme } from './data/theme';
+import { getDashboard } from './data/dashboard';
 
 
 export function App() {
@@ -22,6 +23,7 @@ export function App() {
       getToken={getToken}
       getUser={getUser}
       getMenus={getMenus}
+      getDashboard={getDashboard}
     >
         <LYThemeProvider customTheme={theme}>
           <AppContent />

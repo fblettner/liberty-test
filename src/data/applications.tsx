@@ -44,7 +44,7 @@ export const currentApplication: IAppsProps = {
       [EApplications.limit]: 10000,
       [EApplications.version]: "600",
       [EApplications.session]: ESessionMode.session,
-      [EApplications.dashboard]: undefined,
+      [EApplications.dashboard]: 1,
       [EApplications.theme]: "liberty",
       [EApplications.jwt_token]: "",
     };

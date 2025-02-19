@@ -35,6 +35,7 @@ import { Core_Tooltip } from "../core/Tooltip";
 import { Core_Tree } from "../core/Tree";
 import { Core_Typography } from "../core/Typography";
 import { Core_UseMediaQuery } from "../core/UseMediaQuery";
+import { Core_Dashboard } from "../services/Dashboard";
 
 export const menus = {
     "items": [
@@ -119,7 +120,7 @@ export const menus = {
         },
         {
             "LNG_ID": "en",
-            "MENU_LABEL": "Components",
+            "MENU_LABEL": "Core Components",
             "MENU_COMPONENT": null,
             "MENU_COMPONENT_ID": null,
             "KEY_ATTRIBUTES": "100002.",
@@ -209,7 +210,7 @@ export const menus = {
         },
         {
             "LNG_ID": "en",
-            "MENU_LABEL": "UI",
+            "MENU_LABEL": "Components",
             "MENU_COMPONENT": null,
             "MENU_COMPONENT_ID": null,
             "KEY_ATTRIBUTES": "100003.",
@@ -221,7 +222,7 @@ export const menus = {
                 {
                     "MENU_LABEL": "Header",
                     "MENU_COMPONENT": LYComponentType.FormsContent,
-                    "MENU_COMPONENT_ID": 4,
+                    "MENU_COMPONENT_ID": 60001,
                     "KEY_ATTRIBUTES": "100003.100001.",
                     "MENU_PARENT_ID": "100003.",
                     "MENU_CHILD_ID": "100003.100001.",
@@ -229,6 +230,17 @@ export const menus = {
                     "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_AppsHeader />
                 },
+                {
+                    "MENU_LABEL": "Dashboard",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 60002,
+                    "KEY_ATTRIBUTES": "100003.100002.",
+                    "MENU_PARENT_ID": "100003.",
+                    "MENU_CHILD_ID": "100003.100002.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_Dashboard />
+                },                
             ]
         },        
     ],
