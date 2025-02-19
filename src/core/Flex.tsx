@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, FlexPanels } from "liberty-core";
+import { Card, CardContent, MarkDown, FlexPanels, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # FlexPanels Component
@@ -37,8 +37,8 @@ export const FlexPanelsExample = () => {
 
 export const Core_FlexPanels = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-flexpanels-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -72,7 +72,7 @@ export const Core_FlexPanels = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

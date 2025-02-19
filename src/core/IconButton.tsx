@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, IconButton, LYIconSize } from "liberty-core";
+import { Card, CardContent, MarkDown, IconButton, LYIconSize, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 import { LYThumbUpIcon, LYThumbDownOffIcon } from "liberty-core";
 
 const markDownPreview = `
@@ -46,8 +46,8 @@ export const IconButtonExample = () => {
 
 export const Core_IconButton = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-icon-button-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -69,7 +69,7 @@ export const Core_IconButton = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

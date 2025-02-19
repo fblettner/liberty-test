@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, Typography, useDeviceDetection, useMediaQuery } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Typography, useDeviceDetection, useMediaQuery } from "liberty-core";
 
 const markDownPreview = `
 # useMediaQuery & useDeviceDetection
@@ -51,8 +51,8 @@ export const Core_UseMediaQuery = () => {
   const isDeviceMobile = useDeviceDetection();
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-usemediaquery-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -77,7 +77,7 @@ export const Core_UseMediaQuery = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

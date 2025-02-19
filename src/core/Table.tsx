@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, Table, TableHead, TableBody, TableRow, TableCell, TableSortLabel } from "liberty-core";
+import { Card, CardContent, MarkDown, Table, TableHead, TableBody, TableRow, TableCell, TableSortLabel, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 import { useState } from "react";
 
 const markDownPreview = `
@@ -96,8 +96,8 @@ export const Core_Table = () => {
   };
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-table-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -138,7 +138,7 @@ export const Core_Table = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

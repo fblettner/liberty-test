@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button, MarkDown, Paper_Table, Div_Markdown } from "liberty-core";
+import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button, MarkDown, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # Card Component
@@ -66,8 +66,8 @@ export const CardExample = () => {
 
 export const Core_Card = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-card-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -93,7 +93,7 @@ export const Core_Card = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

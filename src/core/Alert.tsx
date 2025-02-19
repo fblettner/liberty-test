@@ -1,4 +1,4 @@
-import { Alert, Card, CardContent, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
+import { Alert, Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # Alert Component
@@ -40,8 +40,8 @@ export const AlertExample = () => {
 
 export const Core_Alert = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-alert-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -63,7 +63,8 @@ export const Core_Alert = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

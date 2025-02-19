@@ -1,4 +1,4 @@
-import { AlertMessage, Card, CardContent, Div_Markdown, ESeverity, MarkDown, Paper_Table } from "liberty-core";
+import { AlertMessage, Card, CardContent, Div_DialogWidgetContent, ESeverity, MarkDown, Paper_Dialogs } from "liberty-core";
 import { useState } from "react";
 
 const markDownPreview = `
@@ -48,8 +48,8 @@ export const Core_AlertMessage = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-alert-message-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -69,7 +69,7 @@ export const Core_AlertMessage = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

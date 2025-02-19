@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Paper_Table, Divider, Div_Markdown } from "liberty-core";
+import { Card, CardContent, MarkDown, Divider, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # Divider Component
@@ -43,8 +43,8 @@ export const DividerExample = () => {
 
 export const Core_Divider = () => {
     return (
-        <Div_Markdown>
-            <Paper_Table elevation={0} key={"core-divider-1"}>
+        <Paper_Dialogs>
+            <Div_DialogWidgetContent>
                 <Card>
                     <CardContent>
                         {/* Render markdown documentation */}
@@ -69,7 +69,7 @@ export const Core_Divider = () => {
                         <MarkDown markdown={markdownContent} />
                     </CardContent>
                 </Card>
-            </Paper_Table>
-        </Div_Markdown>
+            </Div_DialogWidgetContent>
+        </Paper_Dialogs>
     );
 };

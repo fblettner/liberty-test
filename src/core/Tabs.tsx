@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, Tab, Tabs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Tab, Tabs } from "liberty-core";
 import { useState } from "react";
 
 const markDownPreview = `
@@ -73,8 +73,8 @@ const handleTabChange = (_event: TabChangeEvent, newValue: string): void => {
 };
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-tabs-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -101,7 +101,7 @@ const handleTabChange = (_event: TabChangeEvent, newValue: string): void => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+        </Div_DialogWidgetContent>
+        </Paper_Dialogs>
   );
 };

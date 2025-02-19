@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Paper_Table, CircularProgress, Div_Markdown } from "liberty-core";
+import { Card, CardContent, MarkDown, CircularProgress, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # CircularProgress Component
@@ -38,8 +38,8 @@ export const CircularProgressExample = () => {
 
 export const Core_CircularProgress = () => {
     return (
-        <Div_Markdown>
-            <Paper_Table elevation={0} key={"core-circularprogress-1"}>
+        <Paper_Dialogs>
+            <Div_DialogWidgetContent>
                 <Card>
                     <CardContent>
                         {/* Render markdown documentation */}
@@ -60,7 +60,7 @@ export const Core_CircularProgress = () => {
                         <MarkDown markdown={markdownContent} />
                     </CardContent>
                 </Card>
-            </Paper_Table>
-        </Div_Markdown>
+            </Div_DialogWidgetContent>
+        </Paper_Dialogs>
     );
 };

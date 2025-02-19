@@ -10,6 +10,7 @@ import { getApplications } from './data/applications';
 import { getToken } from './data/token';
 import { getUser } from './data/user';
 import { getMenus } from './data/menus';
+import { theme } from './data/theme';
 
 
 export function App() {
@@ -22,7 +23,7 @@ export function App() {
       getUser={getUser}
       getMenus={getMenus}
     >
-        <LYThemeProvider>
+        <LYThemeProvider customTheme={theme}>
           <AppContent />
         </LYThemeProvider>
     </AppProvider>

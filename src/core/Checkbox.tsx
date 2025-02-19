@@ -1,4 +1,4 @@
-import { Checkbox, MarkDown, Paper_Table, Card, CardContent, Div_Markdown } from "liberty-core";
+import { Checkbox, MarkDown, Card, CardContent, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # Checkbox Component
@@ -41,8 +41,8 @@ export const CheckboxExample = () => {
 
 export const Core_Checkbox = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-checkbox-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -63,7 +63,7 @@ export const Core_Checkbox = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

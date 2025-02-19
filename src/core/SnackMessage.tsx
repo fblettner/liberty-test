@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, ESeverity, MarkDown, Paper_Table, SnackMessage, useAppContext } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, ESeverity, MarkDown, Paper_Dialogs, SnackMessage, useAppContext } from "liberty-core";
 import { useEffect, useRef } from "react";
 
 const markDownPreview = `
@@ -60,8 +60,8 @@ export const Core_SnackMessage = () => {
   }, []);
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-snackmessage-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -78,7 +78,7 @@ export const Core_SnackMessage = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

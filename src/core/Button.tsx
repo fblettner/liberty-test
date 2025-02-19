@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Div_DialogWidgetButtons, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
+import { Button, Card, CardContent, Div_DialogWidgetButtons, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # Button Component
@@ -65,8 +65,8 @@ export const ButtonExample = () => {
 
 export const Core_Button = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-button-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
         <CardContent>
             {/* Render markdown documentation */}
@@ -87,7 +87,7 @@ export const Core_Button = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

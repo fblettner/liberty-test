@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, GridContainer, GridItem } from "liberty-core";
+import { Card, CardContent, MarkDown, GridContainer, GridItem, Paper_Dialogs, Div_DialogWidgetContent } from "liberty-core";
 
 const markDownPreview = `
 # Grid Components
@@ -55,8 +55,8 @@ export const GridExample = () => {
 
 export const Core_Grid = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-grid-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -83,7 +83,7 @@ export const Core_Grid = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

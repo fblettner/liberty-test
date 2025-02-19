@@ -1,28 +1,28 @@
-import { 
-    Card, 
-    CardContent, 
-    Div_Markdown, 
-    MarkDown, 
-    Paper_Table, 
-    List, 
-    ListItem, 
-    ListItemText, 
-    ListItemButton, 
-    Collapse, 
-    LYDashboardIcon,
-    LYUploadIcon
-  } from "liberty-core";
-  import { LYSettingsIcon, LYMenusExpandMoreIcon, LYMenusExpandLessIcon } from "liberty-core";
-  import { useState, Fragment } from "react";
-  
-  const markDownPreview = `
+import {
+  Card,
+  CardContent,
+  MarkDown,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemButton,
+  Collapse,
+  LYDashboardIcon,
+  LYUploadIcon,
+  Div_DialogWidgetContent,
+  Paper_Dialogs
+} from "liberty-core";
+import { LYSettingsIcon, LYMenusExpandMoreIcon, LYMenusExpandLessIcon } from "liberty-core";
+import { useState, Fragment } from "react";
+
+const markDownPreview = `
   # List Component
   
   ## Component Preview
   Below is an interactive example demonstrating the \`List\` component.
   `;
-  
-  const markdownContent = `
+
+const markdownContent = `
   
   ## Description
   The \`List\` component provides a structured way to display lists of items, supporting:
@@ -108,60 +108,60 @@ import {
   };
   \`\`\`
   `;
-  
-  export const Core_List = () => {
-    const [open, setOpen] = useState(false);
-  
-    return (
-      <Div_Markdown>
-        <Paper_Table elevation={0} key={"core-list-1"}>
-          <Card>
-            <CardContent>
-              {/* Render markdown documentation */}
-              <MarkDown markdown={markDownPreview} />
-            </CardContent>
-  
-            <CardContent>
-              {/* Render the actual component */}
-              <List>
-                <Fragment>
-                    <ListItem>
-                        <ListItemButton variant="text" fullWidth startIcon={LYDashboardIcon}>
-                          <ListItemText primary="Home" />
-                        </ListItemButton>
-                    </ListItem>
 
-                  <ListItem>
-                    <ListItemButton
-                      variant="text"
-                      fullWidth
-                      onClick={() => setOpen(!open)}
-                      startIcon={LYSettingsIcon}
-                      endIcon={open ? LYMenusExpandLessIcon : LYMenusExpandMoreIcon}
-                    >
-                      <ListItemText primary="Settings" />
-                    </ListItemButton>
-                  </ListItem>
-  
-                  <Collapse in={open}>
-                    <List padding={false}>
-                      <ListItem>
-                        <ListItemButton variant="text" fullWidth startIcon={LYUploadIcon}>
-                          <ListItemText primary="Upload file" />
-                        </ListItemButton>
-                      </ListItem>
-                    </List>
-                  </Collapse>
-                </Fragment>
-              </List>
-            </CardContent>
-  
-            <CardContent>
-              {/* Render markdown documentation */}
-              <MarkDown markdown={markdownContent} />
-            </CardContent>
-          </Card>
-        </Paper_Table>
-      </Div_Markdown>
-    );
-  };
+export const Core_List = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
+        <Card>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
+
+          <CardContent>
+            {/* Render the actual component */}
+            <List>
+              <Fragment>
+                <ListItem>
+                  <ListItemButton variant="text" fullWidth startIcon={LYDashboardIcon}>
+                    <ListItemText primary="Home" />
+                  </ListItemButton>
+                </ListItem>
+
+                <ListItem>
+                  <ListItemButton
+                    variant="text"
+                    fullWidth
+                    onClick={() => setOpen(!open)}
+                    startIcon={LYSettingsIcon}
+                    endIcon={open ? LYMenusExpandLessIcon : LYMenusExpandMoreIcon}
+                  >
+                    <ListItemText primary="Settings" />
+                  </ListItemButton>
+                </ListItem>
+
+                <Collapse in={open}>
+                  <List padding={false}>
+                    <ListItem>
+                      <ListItemButton variant="text" fullWidth startIcon={LYUploadIcon}>
+                        <ListItemText primary="Upload file" />
+                      </ListItemButton>
+                    </ListItem>
+                  </List>
+                </Collapse>
+              </Fragment>
+            </List>
+          </CardContent>
+
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
+  );
+};

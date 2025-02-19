@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, Tree } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Tree } from "liberty-core";
 
 const markDownPreview = `
 # Tree Component
@@ -41,18 +41,22 @@ export const TreeExample = () => {
 `;
 
 const treeData = [
-  { id: "1", label: "Root", children: [
+  {
+    id: "1", label: "Root", children: [
       { id: "1-1", label: "Child 1" },
-      { id: "1-2", label: "Child 2", children: [
+      {
+        id: "1-2", label: "Child 2", children: [
           { id: "1-2-1", label: "Grandchild 1" },
-      ]},
-  ]},
+        ]
+      },
+    ]
+  },
 ];
 
 export const Core_Tree = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-tree-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -69,7 +73,7 @@ export const Core_Tree = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

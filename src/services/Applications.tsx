@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, EApplications, MarkDown, Paper_Table } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, EApplications, MarkDown, Paper_Dialogs } from "liberty-core";
 import { useAppContext } from "liberty-core";
 import { getApplications } from "../data/applications";
 import { useEffect, useState } from "react";
@@ -66,8 +66,8 @@ export const Core_Applications = () => {
   }, []);
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-applications-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -91,9 +91,9 @@ export const Core_Applications = () => {
             {/* Render the actual component */}
             <h2>Current Application</h2>
             <ul>
-                <li key="apps-current-1">
-                  <strong>{appsProperties[EApplications.name]}</strong> - {appsProperties[EApplications.description]} (Version: {appsProperties[EApplications.version]})
-                </li>
+              <li key="apps-current-1">
+                <strong>{appsProperties[EApplications.name]}</strong> - {appsProperties[EApplications.description]} (Version: {appsProperties[EApplications.version]})
+              </li>
             </ul>
           </CardContent>
 
@@ -102,7 +102,7 @@ export const Core_Applications = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

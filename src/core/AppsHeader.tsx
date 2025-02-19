@@ -1,4 +1,4 @@
-import { AppsHeader, Card, CardContent, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
+import { AppsHeader, Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # AppsHeader Component
@@ -66,8 +66,8 @@ export const AppHeaderExample = () => {
 
 export const Core_AppsHeader = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-apps-header-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card >
           <CardContent>
             {/* Render markdown documentation */}
@@ -88,7 +88,7 @@ export const Core_AppsHeader = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

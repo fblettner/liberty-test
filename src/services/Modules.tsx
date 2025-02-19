@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
 import { useAppContext } from "liberty-core";
 
 const markDownPreview = `
@@ -47,8 +47,8 @@ export const Core_Modules = () => {
   const { modulesProperties } = useAppContext();
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-modules-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -72,7 +72,7 @@ export const Core_Modules = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

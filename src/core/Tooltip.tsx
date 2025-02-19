@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, Tooltip, Button } from "liberty-core";
+import { Card, CardContent, MarkDown, Tooltip, Button, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 
 const markDownPreview = `
 # Tooltip Component
@@ -34,8 +34,8 @@ export const TooltipExample = () => {
 
 export const Core_Tooltip = () => {
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-tooltip-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -54,7 +54,7 @@ export const Core_Tooltip = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

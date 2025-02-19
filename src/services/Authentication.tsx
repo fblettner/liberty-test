@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table, Input, Button, Div_AppsLogin, Typography } from "liberty-core";
+import { Card, CardContent, MarkDown, Input, Button, Div_AppsLogin, Typography, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 import { useState } from "react";
 import { getToken } from "../data/token";
 
@@ -65,8 +65,8 @@ export const Core_Authentication = () => {
   };
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-authentication-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -119,7 +119,7 @@ export const Core_Authentication = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

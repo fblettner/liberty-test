@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
 import { useAppContext } from "liberty-core";
 import { EUsers } from "liberty-core";
 import { useEffect, useState } from "react";
@@ -65,8 +65,8 @@ export const Core_Users = () => {
   }, [userProperties]);
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-users-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -93,7 +93,7 @@ export const Core_Users = () => {
             <MarkDown markdown={markdownContent} />
           </CardContent>
         </Card>
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };

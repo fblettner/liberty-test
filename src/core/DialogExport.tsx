@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Paper_Table, Button, IExportOptions, EExportType, DialogExport, Div_Markdown } from "liberty-core";
+import { Card, CardContent, MarkDown, Button, IExportOptions, EExportType, DialogExport, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
 import { useState } from "react";
 
 const markDownPreview = `
@@ -97,8 +97,8 @@ export const Core_DialogExport = () => {
   };
 
   return (
-    <Div_Markdown>
-      <Paper_Table elevation={0} key={"core-dialog-export-1"}>
+    <Paper_Dialogs>
+      <Div_DialogWidgetContent>
         <Card>
           <CardContent>
             {/* Render markdown documentation */}
@@ -125,7 +125,7 @@ export const Core_DialogExport = () => {
           </CardContent>
         </Card>
 
-      </Paper_Table>
-    </Div_Markdown>
+      </Div_DialogWidgetContent>
+    </Paper_Dialogs>
   );
 };
