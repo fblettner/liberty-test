@@ -57,7 +57,7 @@ export const menus = {
     "items": [
         {
             "LNG_ID": "en",
-            "MENU_LABEL": "Create an application",
+            "MENU_LABEL": "New Project",
             "MENU_COMPONENT": LYComponentType.FormsContent,
             "MENU_COMPONENT_ID": 10000,
             "KEY_ATTRIBUTES": "100000.",
