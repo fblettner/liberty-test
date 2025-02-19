@@ -5,13 +5,10 @@ import {
 }
   from "liberty-core";
 import { useEffect } from "react";
-import { setCustomGetEnums } from "../data/enum";
 import { currentApplication } from "../data/applications";
 import { currentUser } from "../data/user";
 
 const App = () => {
-
-  setCustomGetEnums()
 
   const { appsProperties, connect, login } = useAppContext();
   useEffect(() => {
