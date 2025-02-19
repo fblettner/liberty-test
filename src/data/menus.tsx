@@ -49,9 +49,24 @@ import { Core_AppsContent } from "../main/AppsContent";
 import { Core_AppsLogin } from "../main/AppsLogin";
 import { Core_AppsMenus } from "../main/AppsMenus";
 import { Core_AppsUser } from "../main/AppsUsers";
+import { Core_ErrorBoundary } from "../context/ErrorBoundary";
+import { Core_TranslationProvider } from "../context/I18nextProvider";
+import { Core_CreateApp } from "../components/Create";
 
 export const menus = {
     "items": [
+        {
+            "LNG_ID": "en",
+            "MENU_LABEL": "Create an application",
+            "MENU_COMPONENT": LYComponentType.FormsContent,
+            "MENU_COMPONENT_ID": 10000,
+            "KEY_ATTRIBUTES": "100000.",
+            "MENU_PARENT_ID": "0",
+            "MENU_CHILD_ID": "100000.",
+            "MENU_LEVEL": 1,
+            "AUT_RUN": "Y",
+            "MENU_CONTENT": <Core_CreateApp />
+        },
         {
             "LNG_ID": "en",
             "MENU_LABEL": "Application",
@@ -139,7 +154,29 @@ export const menus = {
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_Theme />
-                },                                                             
+                },        
+                {
+                    "MENU_LABEL": "Error Boundary",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 100008,
+                    "KEY_ATTRIBUTES": "100001.100008.",
+                    "MENU_PARENT_ID": "100001.",
+                    "MENU_CHILD_ID": "100001.100008.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_ErrorBoundary />
+                },    
+                {
+                    "MENU_LABEL": "Translations",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 100009,
+                    "KEY_ATTRIBUTES": "100001.100009.",
+                    "MENU_PARENT_ID": "100001.",
+                    "MENU_CHILD_ID": "100001.100009.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_TranslationProvider />
+                },                                                                       
             ]
         },
         {
