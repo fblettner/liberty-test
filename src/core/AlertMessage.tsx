@@ -59,9 +59,9 @@ export const Core_AlertMessage = () => {
           <CardContent>
             {/* Render the actual component */}
             <AlertMessage open={open} severity={ESeverity.success} message="This is a success alert!" onClose={() => setOpen(false)} />
-            <AlertMessage open={true} severity={ESeverity.info} message="This is an info alert!" onClose={() => console.log("Closed")} />
-            <AlertMessage open={true} severity={ESeverity.warning} message="This is a warning alert!" onClose={() => console.log("Closed")} />
-            <AlertMessage open={true} severity={ESeverity.error} message="This is an error alert!" onClose={() => console.log("Closed")} />
+            <AlertMessage open={true} severity={ESeverity.info} message="This is an info alert!" onClose={() => {}} />
+            <AlertMessage open={true} severity={ESeverity.warning} message="This is a warning alert!" onClose={() => {}} />
+            <AlertMessage open={true} severity={ESeverity.error} message="This is an error alert!" onClose={() => {}} />
           </CardContent>
 
           <CardContent>

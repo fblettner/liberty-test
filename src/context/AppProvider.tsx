@@ -1,5 +1,4 @@
 import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
-import { AppProvider } from "liberty-core";
 
 const markDownPreview = `
 # AppProvider Component
@@ -61,13 +60,6 @@ export const Core_AppProvider = () => {
           <CardContent>
             {/* Render markdown documentation */}
             <MarkDown markdown={markDownPreview} />
-          </CardContent>
-
-          <CardContent>
-            {/* Render the actual component */}
-            <AppProvider>
-              <h3>AppProvider is active</h3>
-            </AppProvider>
           </CardContent>
 
           <CardContent>

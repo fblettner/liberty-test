@@ -1,5 +1,5 @@
 import { LYComponentType } from "liberty-core";
-import { Core_Home } from "../components/Dashboard";
+import { Core_Home } from "../liberty/Dashboard";
 
 export const dashboard = [{ 
     "header": {

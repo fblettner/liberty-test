@@ -1,6 +1,6 @@
 import { LYComponentType } from "liberty-core";
 import { Core_Alert } from "../core/Alert";
-import { Core_AppsHeader } from "../core/AppsHeader";
+import { Core_AppsHeader } from "../liberty/AppsHeader";
 import { Core_Button } from "../core/Button";
 import { Core_Card } from "../core/Card";
 import { Core_Checkbox } from "../core/Checkbox";
@@ -36,6 +36,7 @@ import { Core_Tree } from "../core/Tree";
 import { Core_Typography } from "../core/Typography";
 import { Core_UseMediaQuery } from "../core/UseMediaQuery";
 import { Core_Dashboard } from "../services/Dashboard";
+import { Core_Theme } from "../context/ThemeProvider";
 
 export const menus = {
     "items": [
@@ -115,7 +116,18 @@ export const menus = {
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_UseMediaQuery />
-                },                                                               
+                },     
+                {
+                    "MENU_LABEL": "Themes",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 100007,
+                    "KEY_ATTRIBUTES": "100001.100007.",
+                    "MENU_PARENT_ID": "100001.",
+                    "MENU_CHILD_ID": "100001.100007.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_Theme />
+                },                                                             
             ]
         },
         {
@@ -202,7 +214,7 @@ export const menus = {
                         { "MENU_LABEL": "Grid", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50001, "KEY_ATTRIBUTES": "100002.100004.1.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.1.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_Grid /> },
                         { "MENU_LABEL": "Table", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50002, "KEY_ATTRIBUTES": "100002.100004.2.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.2.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_Table /> },
                         { "MENU_LABEL": "List", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50003, "KEY_ATTRIBUTES": "100002.100004.3.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.3.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_List /> },
-                        { "MENU_LABEL": "Menus", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50004, "KEY_ATTRIBUTES": "100002.100004.4.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.4.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_Menu /> },
+                        { "MENU_LABEL": "Context Menus", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50004, "KEY_ATTRIBUTES": "100002.100004.4.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.4.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_Menu /> },
                         { "MENU_LABEL": "Tree", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50005, "KEY_ATTRIBUTES": "100002.100004.5.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.5.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_Tree /> }
                     ]
                 }
@@ -210,7 +222,7 @@ export const menus = {
         },
         {
             "LNG_ID": "en",
-            "MENU_LABEL": "Components",
+            "MENU_LABEL": "Liberty Components",
             "MENU_COMPONENT": null,
             "MENU_COMPONENT_ID": null,
             "KEY_ATTRIBUTES": "100003.",

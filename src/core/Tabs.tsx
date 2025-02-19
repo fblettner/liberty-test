@@ -84,9 +84,9 @@ const handleTabChange = (_event: TabChangeEvent, newValue: string): void => {
           <CardContent>
             {/* Interactive Component Preview */}
             <Tabs value={selectedTab} onChange={handleTabChange}>
-              <Tab id="general" label="General" value="general" />
-              <Tab id="advanced" label="Advanced" value="advanced" />
-              <Tab id="settings" label="Settings" value="settings" />
+              <Tab id="general" key="general" label="General" value="general" />
+              <Tab id="advanced" key="advanced" label="Advanced" value="advanced" />
+              <Tab id="settings" key="settings" label="Settings" value="settings" />
             </Tabs>
 
             <div style={{ marginTop: "16px", padding: "8px", border: "1px solid #ddd" }}>
