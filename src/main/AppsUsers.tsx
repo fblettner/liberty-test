@@ -147,10 +147,14 @@ By overriding \`getUser\`, you can:
 `;
 
 export const Core_AppsUser = () => {
-    const [isUserOpen, setIsUserOpen] = useState(false);
-    const { toggleDarkMode } = useTheme();
-    const onToggleDarkMode = () => {toggleDarkMode(); }
-    const onToggleUserSettings = () => { setIsUserOpen(!isUserOpen); }
+  const [isUserOpen, setIsUserOpen] = useState(false);
+  const { toggleDarkMode } = useTheme();
+  const onToggleDarkMode = () => { toggleDarkMode(); }
+  const onToggleUserSettings = () => { setIsUserOpen(!isUserOpen); }
+
+
+
+
 
   return (
     <Div_DialogWidgetContent>
@@ -159,16 +163,16 @@ export const Core_AppsUser = () => {
           {/* Render markdown documentation */}
           <MarkDown markdown={markDownPreview} />
         </CardContent>
-            <Div_DialogWidgetButtons>
-                <Button variant="outlined" fullWidth onClick={onToggleUserSettings}>
-                Open User Settings
-                </Button>
-            </Div_DialogWidgetButtons>
-            <AppsUser
-                openDialog={isUserOpen}
-                setOpenDialog={onToggleUserSettings}
-                onToggleDarkMode={onToggleDarkMode}
-            />
+        <Div_DialogWidgetButtons>
+          <Button variant="outlined" fullWidth onClick={onToggleUserSettings}>
+            Open User Settings
+          </Button>
+        </Div_DialogWidgetButtons>
+        <AppsUser
+          openDialog={isUserOpen}
+          setOpenDialog={onToggleUserSettings}
+          onToggleDarkMode={onToggleDarkMode}
+        />
         <CardContent>
           {/* Render markdown documentation */}
           <MarkDown markdown={markdownContent} />

@@ -12,10 +12,15 @@ import { getUser } from './data/user';
 import { getMenus } from './data/menus';
 import { theme } from './data/theme';
 import { getDashboard } from './data/dashboard';
+import { setLookup } from './data/lookup';
+import { setEnums } from './data/enum';
 
 
 export function App() {
 
+  setLookup();
+  setEnums();
+  
   return (
     <AppProvider
       getModules={getModules}
