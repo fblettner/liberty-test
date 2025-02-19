@@ -42,6 +42,9 @@ import { Core_InputFile } from "../input/InputFile";
 import { Core_InputColor } from "../input/InputColor";
 import { Core_InputCheckbox } from "../input/InputCheckbox";
 import { Core_InputEnum } from "../input/InputEnum";
+import { Core_BarChart } from "../charts/BarChart";
+import { Core_LineChart } from "../charts/LineChart";
+import { Core_PieChart } from "../charts/PieChart";
 
 export const menus = {
     "items": [
@@ -227,7 +230,53 @@ export const menus = {
                         { "MENU_LABEL": "Context Menus", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50004, "KEY_ATTRIBUTES": "100002.100004.4.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.4.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_Menu /> },
                         { "MENU_LABEL": "Tree", "MENU_COMPONENT": LYComponentType.FormsContent, "MENU_COMPONENT_ID": 50005, "KEY_ATTRIBUTES": "100002.100004.5.", "MENU_PARENT_ID": "100002.100004.", "MENU_CHILD_ID": "100002.100004.5.", "MENU_LEVEL": 3, "AUT_RUN": "Y", "MENU_CONTENT": <Core_Tree /> }
                     ]
-                }
+                },
+                {
+                    "LNG_ID": "en",
+                    "MENU_LABEL": "Charts",
+                    "MENU_COMPONENT": null,
+                    "MENU_COMPONENT_ID": null,
+                    "KEY_ATTRIBUTES": "100002.100005.",
+                    "MENU_PARENT_ID": "100002",
+                    "MENU_CHILD_ID": "100002.100005.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "children": [                                 
+                        {
+                            "MENU_LABEL": "Bar",
+                            "MENU_COMPONENT": LYComponentType.FormsContent,
+                            "MENU_COMPONENT_ID": 70001,
+                            "KEY_ATTRIBUTES": "100002.100005.100001.",
+                            "MENU_PARENT_ID": "100002.100005.",
+                            "MENU_CHILD_ID": "100002.100005.100001.",
+                            "MENU_LEVEL": 3,
+                            "AUT_RUN": "Y",
+                            "MENU_CONTENT": <Core_BarChart />
+                        },   
+                        {
+                            "MENU_LABEL": "Line",
+                            "MENU_COMPONENT": LYComponentType.FormsContent,
+                            "MENU_COMPONENT_ID": 70001,
+                            "KEY_ATTRIBUTES": "100002.100005.100002.",
+                            "MENU_PARENT_ID": "100002.100005.",
+                            "MENU_CHILD_ID": "100002.100005.100002.",
+                            "MENU_LEVEL": 3,
+                            "AUT_RUN": "Y",
+                            "MENU_CONTENT": <Core_LineChart />
+                        },   
+                        {
+                            "MENU_LABEL": "Pie",
+                            "MENU_COMPONENT": LYComponentType.FormsContent,
+                            "MENU_COMPONENT_ID": 70001,
+                            "KEY_ATTRIBUTES": "100002.100005.100003.",
+                            "MENU_PARENT_ID": "100002.100005.",
+                            "MENU_CHILD_ID": "100002.100005.100003.",
+                            "MENU_LEVEL": 3,
+                            "AUT_RUN": "Y",
+                            "MENU_CONTENT": <Core_PieChart />
+                        },                                        
+                    ]
+                },     
             ]
         },
         {
@@ -264,7 +313,8 @@ export const menus = {
                     "MENU_CONTENT": <Core_Dashboard />
                 },                
             ]
-        },        
+        },      
+           
     ],
     status: "success"
 };
