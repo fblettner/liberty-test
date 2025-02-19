@@ -1,9 +1,15 @@
-import { Button, Card, CardContent, Div_DialogWidgetButtons, MarkDown, Paper_Table } from "liberty-core";
+import { Button, Card, CardContent, Div_DialogWidgetButtons, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
+
+const markDownPreview = `
+# Button Component
+
+## Component Preview
+Below is an interactive example demonstrating the \`Button\` component.
+`;
+
 
 // Markdown Documentation for Button Component
 const markdownContent = `
-# Button Component
-
 ## Description
 The \`Button\` component provides a customizable button with multiple variants and props.  
 It supports different styles, icons, full-width mode, and disabled states.
@@ -55,29 +61,33 @@ export const ButtonExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`Button\` component.
 `;
 
 export const Core_Button = () => {
-    return (
-        <Paper_Table elevation={0} key={"core-button-1"}>
-            <Card>
-                <CardContent>
-                    {/* Render markdown documentation */}
-                    <MarkDown markdown={markdownContent} />
-                </CardContent>
+  return (
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-button-1"}>
+        <Card>
+        <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
 
-                <CardContent>
-                    {/* Render the actual button component */}
-                    <Div_DialogWidgetButtons>
-                        <Button variant="outlined" fullWidth onClick={() => alert("Button clicked")}>
-                            Click Me
-                        </Button>
-                    </Div_DialogWidgetButtons>
-                </CardContent>
-            </Card>
-        </Paper_Table>
-    );
+          <CardContent>
+            {/* Render the actual button component */}
+            <Div_DialogWidgetButtons>
+              <Button variant="outlined" fullWidth onClick={() => alert("Button clicked")}>
+                Click Me
+              </Button>
+            </Div_DialogWidgetButtons>
+          </CardContent>
+
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Paper_Table>
+    </Div_Markdown>
+  );
 };

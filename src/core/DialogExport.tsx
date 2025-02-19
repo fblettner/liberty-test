@@ -1,9 +1,14 @@
-import { Card, CardContent, MarkDown, Paper_Table, Button, IExportOptions, EExportType, DialogExport } from "liberty-core";
+import { Card, CardContent, MarkDown, Paper_Table, Button, IExportOptions, EExportType, DialogExport, Div_Markdown } from "liberty-core";
 import { useState } from "react";
 
-const markdownContent = `
+const markDownPreview = `
 # Dialog Export Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`Dialog Export\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`DialogExport\` component provides a modal dialog to select export options before exporting data. It allows users to configure:
 - **Headers**: Column name vs. column ID
@@ -70,9 +75,6 @@ export const DialogExportExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`DialogExport\` component.
 `;
 
 export const Core_DialogExport = () => {
@@ -95,27 +97,35 @@ export const Core_DialogExport = () => {
   };
 
   return (
-    <Paper_Table elevation={0} key={"core-dialog-export-1"}>
-      <Card>
-        <CardContent>
-          {/* Render markdown documentation */}
-          <MarkDown markdown={markdownContent} />
-        </CardContent>
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-dialog-export-1"}>
+        <Card>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
 
-        <CardContent>
-          {/* Render the actual component */}
-          <Button variant="outlined" onClick={handleOpen}>Open Export Dialog</Button>
-          <DialogExport 
-            open={open} 
-            exportType={EExportType.excel} 
-            onClose={handleClose} 
-            onAccept={handleAccept} 
-            onDecline={handleDecline} 
-            exportOptions={exportOptions} 
-            setExportOptions={setExportOptions} 
-          />
-        </CardContent>
-      </Card>
-    </Paper_Table>
+          <CardContent>
+            {/* Render the actual component */}
+            <Button variant="outlined" onClick={handleOpen}>Open Export Dialog</Button>
+            <DialogExport
+              open={open}
+              exportType={EExportType.excel}
+              onClose={handleClose}
+              onAccept={handleAccept}
+              onDecline={handleDecline}
+              exportOptions={exportOptions}
+              setExportOptions={setExportOptions}
+            />
+          </CardContent>
+
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+
+      </Paper_Table>
+    </Div_Markdown>
   );
 };

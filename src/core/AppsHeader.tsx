@@ -1,8 +1,13 @@
-import { AppsHeader, Card, CardContent, MarkDown, Paper_Table } from "liberty-core";
+import { AppsHeader, Card, CardContent, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
 
-const markdownContent = `
+const markDownPreview = `
 # AppsHeader Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`AppsHeader\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`AppsHeader\` component provides a standard header with multiple actions such as:
 - Opening a menu drawer
@@ -57,32 +62,33 @@ export const AppHeaderExample = () => {
 };
 \`\`\`
 
-# Component Preview
-Below is an interactive example demonstrating the \`AppsHeader\` component.
 `;
 
 export const Core_AppsHeader = () => {
   return (
-    <Paper_Table elevation={0} key={"core-apps-header-1"}>
-    <Card >
-      <CardContent>
-        {/* Render markdown documentation */}
-        <MarkDown markdown={markdownContent} />
-      </CardContent>
-
-      <CardContent>
-        {/* Render the actual component */}
-        <AppsHeader
-          onToggleMenusDrawer={() => alert("Open Menu")}
-          onToggleDarkMode={() => alert("Toggle Dark Mode")}
-          onToggleChat={() => alert("Open Chat")}
-          onToggleUserSettings={() => alert("Open User Settings")}
-          onSignout={() => alert("Signout")}
-        />
-      </CardContent>
-
-
-    </Card>
-    </Paper_Table>
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-apps-header-1"}>
+        <Card >
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
+          <CardContent>
+            {/* Render the actual component */}
+            <AppsHeader
+              onToggleMenusDrawer={() => alert("Open Menu")}
+              onToggleDarkMode={() => alert("Toggle Dark Mode")}
+              onToggleChat={() => alert("Open Chat")}
+              onToggleUserSettings={() => alert("Open User Settings")}
+              onSignout={() => alert("Signout")}
+            />
+          </CardContent>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Paper_Table>
+    </Div_Markdown>
   );
 };

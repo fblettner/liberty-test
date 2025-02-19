@@ -1,9 +1,14 @@
-import { Card, CardContent, MarkDown, Paper_Table, Button, ConfirmationDialog } from "liberty-core";
+import { Card, CardContent, MarkDown, Paper_Table, Button, ConfirmationDialog, Div_Markdown } from "liberty-core";
 import { useState } from "react";
 
-const markdownContent = `
+const markDownPreview = `
 # ConfirmationDialog Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`ConfirmationDialog\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`ConfirmationDialog\` component provides a standard confirmation popup with customizable actions.
 
@@ -46,41 +51,45 @@ export const ConfirmationDialogExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`ConfirmationDialog\` component.
 `;
 
 export const Core_ConfirmationDialog = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Paper_Table elevation={0} key={"core-confirmation-dialog-1"}>
-      <Card>
-        <CardContent>
-          {/* Render markdown documentation */}
-          <MarkDown markdown={markdownContent} />
-        </CardContent>
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-confirmation-dialog-1"}>
+        <Card>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
 
-        <CardContent>
-          {/* Render the actual component */}
-          <Button variant="outlined" onClick={() => setOpen(true)}>Open Confirmation Dialog</Button>
-          <ConfirmationDialog
-            open={open}
-            title="Confirm Action"
-            content="Are you sure you want to proceed?"
-            onClose={() => setOpen(false)}
-            onAccept={() => {
-              alert("Accepted");
-              setOpen(false);
-            }}
-            onDecline={() => {
-              alert("Declined");
-              setOpen(false);
-            }}
-          />
-        </CardContent>
-      </Card>
-    </Paper_Table>
+          <CardContent>
+            {/* Render the actual component */}
+            <Button variant="outlined" onClick={() => setOpen(true)}>Open Confirmation Dialog</Button>
+            <ConfirmationDialog
+              open={open}
+              title="Confirm Action"
+              content="Are you sure you want to proceed?"
+              onClose={() => setOpen(false)}
+              onAccept={() => {
+                alert("Accepted");
+                setOpen(false);
+              }}
+              onDecline={() => {
+                alert("Declined");
+                setOpen(false);
+              }}
+            />
+          </CardContent>
+
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Paper_Table>
+    </Div_Markdown>
   );
 };

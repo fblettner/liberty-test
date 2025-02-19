@@ -1,8 +1,13 @@
-import { Checkbox, MarkDown, Paper_Table, Card, CardContent } from "liberty-core";
+import { Checkbox, MarkDown, Paper_Table, Card, CardContent, Div_Markdown } from "liberty-core";
 
-const markdownContent = `
+const markDownPreview = `
 # Checkbox Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`Checkbox\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`Checkbox\` component is a custom-styled checkbox that supports indeterminate states, labels, and various label placements.
 
@@ -27,40 +32,38 @@ export const CheckboxExample = () => {
       <Checkbox indeterminate={true} label="Indeterminate" />
       <Checkbox checked={true} disabled label="Disabled Checked" />
       <Checkbox checked={false} disabled label="Disabled Unchecked" />
-      <Checkbox checked={true} label="Label Start" labelPlacement="start" />
-      <Checkbox checked={true} label="Label Top" labelPlacement="top" />
-      <Checkbox checked={true} label="Label Bottom" labelPlacement="bottom" />
     </div>
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`Checkbox\` component.
 `;
 
 
 export const Core_Checkbox = () => {
-    return (
-        <Paper_Table elevation={0} key={"core-checkbox-1"}>
-            <Card>
-                <CardContent>
-                    {/* Render markdown documentation */}
-                    <MarkDown markdown={markdownContent} />
-                </CardContent>
+  return (
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-checkbox-1"}>
+        <Card>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
 
-                <CardContent>
-                    {/* Render the actual component */}
-                    <Checkbox checked={true} label="Checked" />
-                    <Checkbox checked={false} label="Unchecked" />
-                    <Checkbox checked={false} indeterminate={true} label="Indeterminate" />
-                    <Checkbox checked={true} disabled label="Disabled Checked" />
-                    <Checkbox checked={false} disabled label="Disabled Unchecked" />
-                    <Checkbox checked={true} label="Label Start" labelPlacement="start" />
-                    <Checkbox checked={true} label="Label Top" labelPlacement="top" />
-                    <Checkbox checked={true} label="Label Bottom" labelPlacement="bottom" />
-                </CardContent>
-            </Card>
-        </Paper_Table>
-    );
+          <CardContent>
+            {/* Render the actual component */}
+            <Checkbox checked={true} label="Checked" />
+            <Checkbox checked={false} label="Unchecked" />
+            <Checkbox checked={false} indeterminate={true} label="Indeterminate" />
+            <Checkbox checked={true} disabled label="Disabled Checked" />
+            <Checkbox checked={false} disabled label="Disabled Unchecked" />
+          </CardContent>
+
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Paper_Table>
+    </Div_Markdown>
+  );
 };

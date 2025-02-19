@@ -1,8 +1,13 @@
-import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button, MarkDown, Paper_Table } from "liberty-core";
+import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button, MarkDown, Paper_Table, Div_Markdown } from "liberty-core";
 
-const markdownContent = `
+const markDownPreview = `
 # Card Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`Card\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`Card\` component is a versatile container that can display structured content, such as headers, actions, and clickable areas.
 
@@ -57,35 +62,38 @@ export const CardExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`Card\` component.
 `;
 
 export const Core_Card = () => {
-    return (
-        <Paper_Table elevation={0} key={"core-card-1"}>
-            <Card>
-                <CardContent>
-                    {/* Render markdown documentation */}
-                    <MarkDown markdown={markdownContent} />
-                </CardContent>
-                <CardContent>
-                    {/* Render the actual component */}
-                    <Card isSelected={true}>
-                        <CardHeader title="Card Title" action={<Button variant="text">Edit</Button>} />
-                        <CardContent>
-                            This is the content inside the card. You can add text, images, or other elements here.
-                        </CardContent>
-                        <CardActionArea onClick={() => alert("Card Clicked!")}>
-                            Clickable Area
-                        </CardActionArea>
-                        <CardActions>
-                            <Button variant="contained" onClick={() => alert("Action Clicked!")}>Action</Button>
-                        </CardActions>
-                    </Card>
-                </CardContent>
+  return (
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-card-1"}>
+        <Card>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
+          <CardContent>
+            {/* Render the actual component */}
+            <Card isSelected={true}>
+              <CardHeader title="Card Title" action={<Button variant="text">Edit</Button>} />
+              <CardContent>
+                This is the content inside the card. You can add text, images, or other elements here.
+              </CardContent>
+              <CardActionArea onClick={() => alert("Card Clicked!")}>
+                Clickable Area
+              </CardActionArea>
+              <CardActions>
+                <Button variant="outlined" fullWidth onClick={() => alert("Action Clicked!")}>Action</Button>
+              </CardActions>
             </Card>
-        </Paper_Table>
-    );
+          </CardContent>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Paper_Table>
+    </Div_Markdown>
+  );
 };

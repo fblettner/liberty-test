@@ -1,8 +1,13 @@
-import { Card, CardContent, MarkDown, Paper_Table, CircularProgress } from "liberty-core";
+import { Card, CardContent, MarkDown, Paper_Table, CircularProgress, Div_Markdown } from "liberty-core";
 
-const markdownContent = `
+const markDownPreview = `
 # CircularProgress Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`CircularProgress\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`CircularProgress\` component displays a rotating loader, commonly used to indicate an ongoing operation.
 
@@ -29,29 +34,33 @@ export const CircularProgressExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`CircularProgress\` component.
 `;
 
 export const Core_CircularProgress = () => {
     return (
-        <Paper_Table elevation={0} key={"core-circularprogress-1"}>
-            <Card>
-                <CardContent>
-                    {/* Render markdown documentation */}
-                    <MarkDown markdown={markdownContent} />
-                </CardContent>
+        <Div_Markdown>
+            <Paper_Table elevation={0} key={"core-circularprogress-1"}>
+                <Card>
+                    <CardContent>
+                        {/* Render markdown documentation */}
+                        <MarkDown markdown={markDownPreview} />
+                    </CardContent>
 
-                <CardContent>
-                    {/* Render the actual component */}
-                    <div style={{ display: "flex", gap: "16px" }}>
-                        <CircularProgress size={40} />
-                        <CircularProgress size={50} thickness={5} color="#ff4081" />
-                        <CircularProgress size={60} thickness={6} trackColor="gray" speed={2} />
-                    </div>
-                </CardContent>
-            </Card>
-        </Paper_Table>
+                    <CardContent>
+                        {/* Render the actual component */}
+                        <div style={{ display: "flex", gap: "16px" }}>
+                            <CircularProgress size={40} />
+                            <CircularProgress size={50} thickness={5} color="#ff4081" />
+                            <CircularProgress size={60} thickness={6} trackColor="gray" speed={2} />
+                        </div>
+                    </CardContent>
+
+                    <CardContent>
+                        {/* Render markdown documentation */}
+                        <MarkDown markdown={markdownContent} />
+                    </CardContent>
+                </Card>
+            </Paper_Table>
+        </Div_Markdown>
     );
 };

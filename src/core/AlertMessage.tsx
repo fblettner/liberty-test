@@ -1,9 +1,14 @@
-import { AlertMessage, Card, CardContent, ESeverity, MarkDown, Paper_Table } from "liberty-core";
+import { AlertMessage, Card, CardContent, Div_Markdown, ESeverity, MarkDown, Paper_Table } from "liberty-core";
 import { useState } from "react";
 
-const markdownContent = `
+const markDownPreview = `
 # AlertMessage Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`AlertMessage\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`AlertMessage\` component is a wrapper around the \`Alert\` component that provides automatic dismissal for non-error messages.
 
@@ -37,30 +42,34 @@ export const AlertMessageExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`AlertMessage\` component.
 `;
 
 export const Core_AlertMessage = () => {
-    const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(true);
 
-    return (
-        <Paper_Table elevation={0} key={"core-alert-message-1"}>
-            <Card>
-                <CardContent>
-                    {/* Render markdown documentation */}
-                    <MarkDown markdown={markdownContent} />
-                </CardContent>
+  return (
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-alert-message-1"}>
+        <Card>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
 
-                <CardContent>
-                    {/* Render the actual component */}
-                    <AlertMessage open={open} severity={ESeverity.success} message="This is a success alert!" onClose={() => setOpen(false)} />
-                    <AlertMessage open={true} severity={ESeverity.info} message="This is an info alert!" onClose={() => console.log("Closed")} />
-                    <AlertMessage open={true} severity={ESeverity.warning} message="This is a warning alert!" onClose={() => console.log("Closed")} />
-                    <AlertMessage open={true} severity={ESeverity.error} message="This is an error alert!" onClose={() => console.log("Closed")} />
-                </CardContent>
-            </Card>
-        </Paper_Table>
-    );
+          <CardContent>
+            {/* Render the actual component */}
+            <AlertMessage open={open} severity={ESeverity.success} message="This is a success alert!" onClose={() => setOpen(false)} />
+            <AlertMessage open={true} severity={ESeverity.info} message="This is an info alert!" onClose={() => console.log("Closed")} />
+            <AlertMessage open={true} severity={ESeverity.warning} message="This is a warning alert!" onClose={() => console.log("Closed")} />
+            <AlertMessage open={true} severity={ESeverity.error} message="This is an error alert!" onClose={() => console.log("Closed")} />
+          </CardContent>
+
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Paper_Table>
+    </Div_Markdown>
+  );
 };

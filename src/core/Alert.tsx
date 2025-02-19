@@ -1,8 +1,13 @@
-import { Alert, Card, CardContent, MarkDown, Paper_Table } from "liberty-core";
+import { Alert, Card, CardContent, Div_Markdown, MarkDown, Paper_Table } from "liberty-core";
 
-const markdownContent = `
+const markDownPreview = `
 # Alert Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`Alert\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`Alert\` component provides a styled alert message with various severity levels. It can also be dismissible.
 
@@ -30,30 +35,35 @@ export const AlertExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`Alert\` component.
-`;
+`
+  ;
 
 export const Core_Alert = () => {
-    return (
-        <Paper_Table elevation={0} key={"core-alert-1"}>
-            <Card>
-                <CardContent>
-                    {/* Render markdown documentation */}
-                    <MarkDown markdown={markdownContent} />
-                </CardContent>
+  return (
+    <Div_Markdown>
+      <Paper_Table elevation={0} key={"core-alert-1"}>
+        <Card>
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markDownPreview} />
+          </CardContent>
 
-                <CardContent>
-                    {/* Render the actual component */}
-                    <Alert variant="success">This is a success alert!</Alert>
-                    <Alert variant="info">This is an info alert.</Alert>
-                    <Alert variant="warning" dismissible >
-                        This is a dismissible warning alert.
-                    </Alert>
-                    <Alert variant="error">This is an error alert.</Alert>
-                </CardContent>
-            </Card>
-        </Paper_Table>
-    );
+          <CardContent>
+            {/* Render the actual component */}
+            <Alert variant="success">This is a success alert!</Alert>
+            <Alert variant="info">This is an info alert.</Alert>
+            <Alert variant="warning" dismissible >
+              This is a dismissible warning alert.
+            </Alert>
+            <Alert variant="error">This is an error alert.</Alert>
+          </CardContent>
+
+          <CardContent>
+            {/* Render markdown documentation */}
+            <MarkDown markdown={markdownContent} />
+          </CardContent>
+        </Card>
+      </Paper_Table>
+    </Div_Markdown>
+  );
 };

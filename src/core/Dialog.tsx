@@ -1,10 +1,14 @@
-import { Card, CardContent, MarkDown, Paper_Table, Button, Dialog, Dialog_Title, Dialog_Content, Dialog_Actions, LYCancelIcon, t, Paper_Popup } from "liberty-core";
+import { Card, CardContent, MarkDown, Paper_Table, Button, Dialog, Dialog_Title, Dialog_Content, Dialog_Actions, LYCancelIcon, t, Paper_Popup, Div_Markdown } from "liberty-core";
 import { useState } from "react";
 
-
-const markdownContent = `
+const markDownPreview = `
 # Dialog Component
 
+## Component Preview
+Below is an interactive example demonstrating the \`Dialog\` component.
+`;
+
+const markdownContent = `
 ## Description
 The \`Dialog\` component is a modal dialog that appears over the main content. It supports customizable backdrop behavior, ESC key closing, and scroll options.
 
@@ -59,9 +63,6 @@ export const DialogExample = () => {
   );
 };
 \`\`\`
-
-# Component Preview
-Below is an interactive example demonstrating the \`Dialog\` component.
 `;
 
 export const Core_Dialog = () => {
@@ -72,31 +73,38 @@ export const Core_Dialog = () => {
     };
 
     return (
-        <Paper_Table elevation={0} key={"core-dialog-1"}>
-            <Card>
-                <CardContent>
-                    {/* Render markdown documentation */}
-                    <MarkDown markdown={markdownContent} />
-                </CardContent>
+        <Div_Markdown>
+            <Paper_Table elevation={0} key={"core-dialog-1"}>
+                <Card>
+                    <CardContent>
+                        {/* Render markdown documentation */}
+                        <MarkDown markdown={markDownPreview} />
+                    </CardContent>
 
-                <CardContent>
-                    {/* Render the actual component */}
-                    <Button variant="outlined" onClick={() => setOpen(true)}>Open Dialog</Button>
-                    <Dialog open={open} onClose={handleClose} maxWidth="500px" closeOnEsc>
-                        <Paper_Popup>
-                            <Dialog_Title>Dialog Title</Dialog_Title>
-                            <Dialog_Content>
-                                This is a simple dialog content area.
-                            </Dialog_Content>
-                            <Dialog_Actions>
-                                <Button variant="outlined" onClick={handleClose} startIcon={LYCancelIcon}>
-                                    {t('button.close')}
-                                </Button>
-                            </Dialog_Actions>
-                        </Paper_Popup>
-                    </Dialog>
-                </CardContent>
-            </Card>
-        </Paper_Table>
+                    <CardContent>
+                        {/* Render the actual component */}
+                        <Button variant="outlined" onClick={() => setOpen(true)}>Open Dialog</Button>
+                        <Dialog open={open} onClose={handleClose} maxWidth="500px" closeOnEsc>
+                            <Paper_Popup>
+                                <Dialog_Title>Dialog Title</Dialog_Title>
+                                <Dialog_Content>
+                                    This is a simple dialog content area.
+                                </Dialog_Content>
+                                <Dialog_Actions>
+                                    <Button variant="outlined" onClick={handleClose} startIcon={LYCancelIcon}>
+                                        {t('button.close')}
+                                    </Button>
+                                </Dialog_Actions>
+                            </Paper_Popup>
+                        </Dialog>
+                    </CardContent>
+
+                    <CardContent>
+                        {/* Render markdown documentation */}
+                        <MarkDown markdown={markdownContent} />
+                    </CardContent>
+                </Card>
+            </Paper_Table>
+        </Div_Markdown>
     );
 };
