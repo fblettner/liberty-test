@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, Div_InputChat, MarkDown, Paper_Dialogs, Typography } from "liberty-core";
-import { InputFile } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, Div_InputChat, MarkDown, Paper_Dialogs, Typography } from '@nomana-it/liberty-core';
+import { InputFile } from '@nomana-it/liberty-core';
 import { useRef } from "react";
 
 const markDownPreview = `
@@ -24,7 +24,7 @@ The \`InputFile\` component allows users to upload files via a button-based inte
 
 ## Example Usage
 \`\`\`tsx
-import { InputFile } from "liberty-core";
+import { InputFile } from '@nomana-it/liberty-core';
 import { useRef } from "react";
 
 export const InputFileExample = () => {

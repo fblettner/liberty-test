@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Menu, MenuItem, SubMenu, Popper, Divider, Button, Div_DialogWidgetButtons, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Menu, MenuItem, SubMenu, Popper, Divider, Button, Div_DialogWidgetButtons, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -42,7 +42,7 @@ The \`Menu\` component is a floating menu that appears next to an anchor element
 ## Example Usage
 \`\`\`tsx
 import { useState } from "react";
-import { Menu, MenuItem, SubMenu, Popper, Divider, Button } from "liberty-core";
+import { Menu, MenuItem, SubMenu, Popper, Divider, Button } from '@nomana-it/liberty-core';
 
 export const MenuExample = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);

@@ -1,4 +1,4 @@
-import { AppsHeader, Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { AppsHeader, Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # AppsHeader Component
@@ -27,7 +27,7 @@ The \`AppsHeader\` component provides a standard header with multiple actions su
 
 ## Example Usage
 \`\`\`tsx
-import { AppsHeader } from "liberty-core";
+import { AppsHeader } from '@nomana-it/liberty-core';
 
 export const AppHeaderExample = () => {
   const onToggleMenusDrawer = () => {

@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # TranslationProvider Component
@@ -24,7 +24,7 @@ To use the \`TranslationProvider\`, wrap it around your application inside **Rea
 \`\`\`tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { AppProvider, TranslationProvider } from "liberty-core";
+import { AppProvider, TranslationProvider } from '@nomana-it/liberty-core';
 import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

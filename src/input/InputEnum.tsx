@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, EEnumHeader, MarkDown, Paper_Dialogs, ToolsDictionary } from "liberty-core";
-import { InputEnum } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, EEnumHeader, MarkDown, Paper_Dialogs, ToolsDictionary } from '@nomana-it/liberty-core';
+import { InputEnum } from '@nomana-it/liberty-core';
 import { useCallback } from "react";
 
 const markDownPreview = `
@@ -36,7 +36,7 @@ The \`InputEnum\` component is an advanced dropdown that retrieves values dynami
 
 ## Example Usage
 \`\`\`tsx
-import { InputEnum } from "liberty-core";
+import { InputEnum } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const InputEnumExample = () => {
@@ -65,7 +65,7 @@ export const InputEnumExample = () => {
 ## Overriding the Default API
 You can override the default API and set custom content:
 \`\`\`tsx
-import { setCustomGetEnums } from "liberty-core";
+import { setCustomGetEnums } from '@nomana-it/liberty-core';
 
 const customEnumData = [{
   columns: [

@@ -1,5 +1,5 @@
-import { Card, CardContent, MarkDown, IconButton, LYIconSize, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
-import { LYThumbUpIcon, LYThumbDownOffIcon } from "liberty-core";
+import { Card, CardContent, MarkDown, IconButton, LYIconSize, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
+import { LYThumbUpIcon, LYThumbDownOffIcon } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # IconButton Component
@@ -28,7 +28,7 @@ The \`IconButton\` component is a button wrapper specifically for **icons**, off
 
 ## Example Usage
 \`\`\`tsx
-import { IconButton } from "liberty-core";
+import { IconButton } from '@nomana-it/liberty-core';
 import { LYThumbUpIcon, LYThumbDownOffIcon } from "@ly_styles/icons";
 
 export const IconButtonExample = () => {

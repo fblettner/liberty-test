@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Typography } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Typography } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Typography Component
@@ -29,7 +29,7 @@ The \`Typography\` component is used for consistent text styling across the appl
 
 ## Example Usage
 \`\`\`tsx
-import { Typography } from "liberty-core";
+import { Typography } from '@nomana-it/liberty-core';
 
 export const TypographyExample = () => {
   return (

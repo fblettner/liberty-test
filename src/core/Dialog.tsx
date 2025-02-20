@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Button, Dialog, Dialog_Title, Dialog_Content, Dialog_Actions, LYCancelIcon, t, Paper_Popup, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Button, Dialog, Dialog_Title, Dialog_Content, Dialog_Actions, LYCancelIcon, t, Paper_Popup, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -31,7 +31,7 @@ The \`Dialog\` component is a modal dialog that appears over the main content. I
 
 ## Example Usage
 \`\`\`tsx
-import { Dialog, Button, Dialog_Title, Dialog_Content, Dialog_Actions } from "liberty-core";
+import { Dialog, Button, Dialog_Title, Dialog_Content, Dialog_Actions } from '@nomana-it/liberty-core';
 import { useState } from "react";
 import { t } from "i18next";
 import { LYCancelIcon } from "@ly_styles/icons";

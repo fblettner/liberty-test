@@ -1,4 +1,4 @@
-import { Alert, Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Alert, Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Alert Component
@@ -20,7 +20,7 @@ The \`Alert\` component provides a styled alert message with various severity le
 
 ## Example Usage
 \`\`\`tsx
-import { Alert } from "liberty-core";
+import { Alert } from '@nomana-it/liberty-core';
 
 export const AlertExample = () => {
   return (

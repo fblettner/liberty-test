@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Popper, Button, Div_DialogWidgetButtons, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Popper, Button, Div_DialogWidgetButtons, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -27,7 +27,7 @@ The \`Popper\` component provides a floating UI container that appears next to a
 ## Example Usage
 \`\`\`tsx
 import { useState } from "react";
-import { Popper, Button } from "liberty-core";
+import { Popper, Button } from '@nomana-it/liberty-core';
 
 export const PopperExample = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);

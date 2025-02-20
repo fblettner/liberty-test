@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # AppsMenus Component
@@ -95,7 +95,7 @@ By overriding \`getMenus\`, you can **customize navigation dynamically** based o
 
 ## Example Usage
 \`\`\`tsx
-import { AppsMenus } from "liberty-core";
+import { AppsMenus } from '@nomana-it/liberty-core';
 
 <AppsMenus 
     isOpen={true} 

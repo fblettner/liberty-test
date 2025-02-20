@@ -1,4 +1,4 @@
-import { EEnumHeader, GlobalSettings, ToolsDictionary } from "liberty-core";
+import { EEnumHeader, GlobalSettings, ToolsDictionary } from '@nomana-it/liberty-core';
 
   const enumData = [{
     columns: [

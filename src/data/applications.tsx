@@ -1,4 +1,4 @@
-import { EApplications, ESessionMode, IAppsProps } from "liberty-core";
+import { EApplications, ESessionMode, IAppsProps } from '@nomana-it/liberty-core';
 
 export const appsProperties = {
     "items": [

@@ -1,4 +1,4 @@
-import { EUsers, IUsersProps, UIDisplayMode } from "liberty-core";
+import { EUsers, IUsersProps, UIDisplayMode } from '@nomana-it/liberty-core';
 
 export const user = [
         {

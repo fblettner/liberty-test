@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
-import { InputColor } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
+import { InputColor } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -25,7 +25,7 @@ The \`InputColor\` component allows users to select colors using an interactive 
 
 ## Example Usage
 \`\`\`tsx
-import { InputColor } from "liberty-core";
+import { InputColor } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const InputColorExample = () => {

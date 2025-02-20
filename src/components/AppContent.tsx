@@ -3,7 +3,7 @@ import {
   EApplications,
   useAppContext,
 }
-  from "liberty-core";
+  from '@nomana-it/liberty-core';
 import { useEffect } from "react";
 import { currentApplication } from "../data/applications";
 import { currentUser } from "../data/user";

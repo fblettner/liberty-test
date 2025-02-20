@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
-import { InputCheckbox } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
+import { InputCheckbox } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -25,7 +25,7 @@ The \`InputCheckbox\` component is a reusable checkbox input with built-in state
 
 ## Example Usage
 \`\`\`tsx
-import { InputCheckbox } from "liberty-core";
+import { InputCheckbox } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const InputCheckboxExample = () => {

@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, useTheme } from "liberty-core";
-import { PieChart } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, useTheme } from '@nomana-it/liberty-core';
+import { PieChart } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # PieChart Component
@@ -21,7 +21,7 @@ The \`PieChart\` component provides a customizable **Doughnut/Pie Chart** using 
 
 ## Example Usage
 \`\`\`tsx
-import { PieChart } from "liberty-core";
+import { PieChart } from '@nomana-it/liberty-core'
 
 const chartData = [
   { value: 40, label: "Product A" },

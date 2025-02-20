@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, AdvancedFlexPanels, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, AdvancedFlexPanels, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # AdvancedFlexPanels Component
@@ -24,7 +24,7 @@ The \`AdvancedFlexPanels\` component is a **bi-dimensional, resizable** layout s
 
 ## Example Usage
 \`\`\`tsx
-import { AdvancedFlexPanels } from "liberty-core";
+import { AdvancedFlexPanels } from '@nomana-it/liberty-core';
 
 export const AdvancedFlexPanelsExample = () => {
   return (

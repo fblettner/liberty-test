@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Toggle, ToggleGroup } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Toggle, ToggleGroup } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -30,7 +30,7 @@ The \`Toggle\` component represents a selectable button that can be used alone o
 
 ## Example Usage
 \`\`\`tsx
-import { Toggle, ToggleGroup } from "liberty-core";
+import { Toggle, ToggleGroup } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const ToggleExample = () => {

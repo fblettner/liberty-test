@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Liberty Core
@@ -49,7 +49,7 @@ npm install @nomana-it/liberty-core
 
 Then import the necessary components:
 \`\`\`tsx
-import { AppProvider, Button, Dialog } from "liberty-core";
+import { AppProvider, Button, Dialog } from '@nomana-it/liberty-core';
 
 export const MyApp = () => (
   <AppProvider>

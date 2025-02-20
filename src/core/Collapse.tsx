@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Collapse, Button, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Collapse, Button, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -21,7 +21,7 @@ The \`Collapse\` component allows content to expand and collapse smoothly with a
 
 ## Example Usage
 \`\`\`tsx
-import { Collapse, Button } from "liberty-core";
+import { Collapse, Button } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const CollapseExample = () => {

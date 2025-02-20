@@ -1,4 +1,4 @@
-import { AlertMessage, Card, CardContent, Div_DialogWidgetContent, ESeverity, MarkDown, Paper_Dialogs } from "liberty-core";
+import { AlertMessage, Card, CardContent, Div_DialogWidgetContent, ESeverity, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -26,7 +26,7 @@ The \`AlertMessage\` component is a wrapper around the \`Alert\` component that 
 
 ## Example Usage
 \`\`\`tsx
-import { AlertMessage } from "liberty-core";
+import { AlertMessage } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const AlertMessageExample = () => {

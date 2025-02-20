@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, useTheme } from "liberty-core";
-import { BarChart } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, useTheme } from "@nomana-it/liberty-core";
+import { BarChart } from "@nomana-it/liberty-core";
 
 const markDownPreview = `
 # BarChart Component
@@ -26,7 +26,7 @@ The \`BarChart\` component is a customizable bar chart using Chart.js. It suppor
 
 ## Example Usage
 \`\`\`tsx
-import { BarChart } from "liberty-core";
+import { BarChart } from '@nomana-it/liberty-core';
 
 const dataset = [
   { month: "Jan", revenue: 10000, profit: 3000 },

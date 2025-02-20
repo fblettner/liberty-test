@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Typography, useDeviceDetection, useMediaQuery } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Typography, useDeviceDetection, useMediaQuery } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # useMediaQuery & useDeviceDetection
@@ -21,7 +21,7 @@ This hook detects if the user is on a mobile or tablet device.
 ## Example Usage
 \`\`\`tsx
 import { useMediaQuery, useDeviceDetection } from "@ly_common/UseMediaQuery";
-import { Typography } from "liberty-core";
+import { Typography } from "'@nomana-it/liberty-core';
 
 export const MediaQueryExample = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");

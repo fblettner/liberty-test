@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Tooltip, Button, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Tooltip, Button, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Tooltip Component
@@ -20,7 +20,7 @@ The \`Tooltip\` component provides a simple way to display contextual hints when
 
 ## Example Usage
 \`\`\`tsx
-import { Tooltip, Button } from "liberty-core";
+import { Tooltip, Button } from '@nomana-it/liberty-core';
 
 export const TooltipExample = () => {
   return (

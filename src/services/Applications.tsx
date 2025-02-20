@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, EApplications, MarkDown, Paper_Dialogs } from "liberty-core";
-import { useAppContext } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, EApplications, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
+import { useAppContext } from '@nomana-it/liberty-core';
 import { getApplications } from "../data/applications";
 import { useEffect, useState } from "react";
 
@@ -31,7 +31,7 @@ The \`Applications Configuration\` defines multiple applications within the Libe
 
 ## Example Usage
 \`\`\`tsx
-import { useAppContext } from "liberty-core";
+import { useAppContext } from '@nomana-it/liberty-core';
 
 export const ApplicationsExample = () => {
   const { appsProperties } = useAppContext();

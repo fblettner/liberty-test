@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Button, IExportOptions, EExportType, DialogExport, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Button, IExportOptions, EExportType, DialogExport, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -36,7 +36,7 @@ The \`DialogExport\` component provides a modal dialog to select export options 
 
 ## Example Usage
 \`\`\`tsx
-import { DialogExport, Button } from "liberty-core";
+import { DialogExport, Button } from '@nomana-it/liberty-core';
 import { useState } from "react";
 import { EExportType, IExportOptions } from "@ly_utils/commonUtils";
 

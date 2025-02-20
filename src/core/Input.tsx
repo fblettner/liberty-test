@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Input, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Input, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Input Component
@@ -37,7 +37,7 @@ The \`Input\` component is a reusable text input field supporting:
 
 ## Example Usage
 \`\`\`tsx
-import { Input } from "liberty-core";
+import { Input } from '@nomana-it/liberty-core';
 
 export const InputExample = () => {
   const [text, setText] = useState("");

@@ -3,7 +3,7 @@
  * All rights reserved. Use is subject to license terms.
  * *
  */
-import { AppProvider, LYThemeProvider } from 'liberty-core';
+import { AppProvider, LYThemeProvider } from "@nomana-it/liberty-core";
 import AppContent from './components/AppContent';
 import { getModules } from './data/modules';
 import { getApplications } from './data/applications';

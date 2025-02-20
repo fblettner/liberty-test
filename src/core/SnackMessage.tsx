@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, ESeverity, MarkDown, Paper_Dialogs, SnackMessage, useAppContext } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, ESeverity, MarkDown, Paper_Dialogs, SnackMessage, useAppContext } from '@nomana-it/liberty-core';
 import { useEffect, useRef } from "react";
 
 const markDownPreview = `
@@ -24,7 +24,7 @@ The component is used globally and does not require props. It automatically retr
 
 ## Example Usage
 \`\`\`tsx
-import { SnackMessage } from "liberty-core";
+import { SnackMessage } from '@nomana-it/liberty-core';
 import { useAppContext } from "@ly_context/AppProvider";
 import { ESeverity } from "@ly_types/common";
 

@@ -1,4 +1,4 @@
-import { mapThemeColors, Theme } from "liberty-core";
+import { mapThemeColors, Theme } from '@nomana-it/liberty-core';
 
 const themeColors = [
     {

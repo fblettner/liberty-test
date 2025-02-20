@@ -1,4 +1,4 @@
-import { ELookup, GlobalSettings, ToolsDictionary } from "liberty-core";
+import { ELookup, GlobalSettings, ToolsDictionary } from '@nomana-it/liberty-core';
 
 const lookupData = [{
     "columns": [
@@ -147,7 +147,7 @@ const lookupData = [{
     ],
     "header": {
         "ROW_ID": 1,
-        "LKP_ID": 11,
+        "LKP_ID": GlobalSettings.getQuery.lookupLanguage,
         "LKP_QUERY_ID": 67,
         "LKP_DISPLAY_ADD": "N",
         "LKP_FRM_ID": null,

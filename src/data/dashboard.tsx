@@ -1,4 +1,4 @@
-import { LYComponentType } from "liberty-core";
+import { LYComponentType } from '@nomana-it/liberty-core';
 import { Core_Home } from "../forms/Dashboard";
 
 export const dashboard = [{ 

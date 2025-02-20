@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { getDashboard } from "../data/dashboard";
 import { useEffect, useState } from "react";
 
@@ -33,7 +33,7 @@ A dashboard consists of **header metadata** and **content components** that can 
 
 ## Example Usage
 \`\`\`tsx
-import { getDashboard } from "liberty-core";
+import { getDashboard } from '@nomana-it/liberty-core';
 
 export const DashboardExample = async () => {
   const dashboard = await getDashboard(1);

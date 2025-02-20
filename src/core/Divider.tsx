@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Divider, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Divider, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Divider Component
@@ -21,7 +21,7 @@ The \`Divider\` component is used to separate content with a thin line. It can b
 
 ## Example Usage
 \`\`\`tsx
-import { Divider } from "liberty-core";
+import { Divider } from '@nomana-it/liberty-core';
 
 export const DividerExample = () => {
   return (

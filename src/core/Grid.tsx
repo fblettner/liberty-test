@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, GridContainer, GridItem, Paper_Dialogs, Div_DialogWidgetContent } from "liberty-core";
+import { Card, CardContent, MarkDown, GridContainer, GridItem, Paper_Dialogs, Div_DialogWidgetContent } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Grid Components
@@ -33,7 +33,7 @@ The \`GridContainer\` and \`GridItem\` components provide a **flexible grid layo
 
 ## Example Usage
 \`\`\`tsx
-import { GridContainer, GridItem } from "liberty-core";
+import { GridContainer, GridItem } from '@nomana-it/liberty-core';
 
 export const GridExample = () => {
   return (

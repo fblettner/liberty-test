@@ -11,8 +11,8 @@ import {
   LYUploadIcon,
   Div_DialogWidgetContent,
   Paper_Dialogs
-} from "liberty-core";
-import { LYSettingsIcon, LYMenusExpandMoreIcon, LYMenusExpandLessIcon } from "liberty-core";
+} from '@nomana-it/liberty-core';
+import { LYSettingsIcon, LYMenusExpandMoreIcon, LYMenusExpandLessIcon } from '@nomana-it/liberty-core';
 import { useState, Fragment } from "react";
 
 const markDownPreview = `
@@ -70,7 +70,7 @@ const markdownContent = `
     ListItemIcon, 
     ListItemText, 
     Collapse 
-  } from "liberty-core";
+  } from '@nomana-it/liberty-core';
   import { LYReactIcon } from "@ly_styles/icons";
   import { LYHomeIcon, LYSettingsIcon, LYMenusExpandMoreIcon, LYMenusExpandLessIcon } from "@ly_styles/icons";
   import { useState, Fragment } from "react";

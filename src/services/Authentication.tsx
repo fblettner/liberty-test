@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Input, Button, Div_AppsLogin, Typography, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Input, Button, Div_AppsLogin, Typography, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 import { getToken } from "../data/token";
 
@@ -40,7 +40,7 @@ The authentication system in Liberty Framework uses an access token mechanism. A
 
 ## Example Usage
 \`\`\`tsx
-import { getToken } from "liberty-core";
+import { getToken } from '@nomana-it/liberty-core';
 
 export const AuthenticationExample = async () => {
   const response = await getToken("admin", "admin");

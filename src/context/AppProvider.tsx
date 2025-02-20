@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # AppProvider Component
@@ -29,7 +29,7 @@ This provider allows injecting custom functions for retrieving data such as appl
 
 ## Example Usage
 \`\`\`tsx
-import { AppProvider, useAppContext } from "liberty-core";
+import { AppProvider, useAppContext } from '@nomana-it/liberty-core';
 
 export const AppProviderExample = () => {
   return (

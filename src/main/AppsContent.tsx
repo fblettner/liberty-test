@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # AppsContent Component
@@ -24,7 +24,7 @@ The \`AppsContent\` component is the **core layout container** for Liberty Core 
 
 ## Example Usage
 \`\`\`tsx
-import { AppProvider, AppsContent } from "liberty-core";
+import { AppProvider, AppsContent } from '@nomana-it/liberty-core';
 
 export const MyApp = () => {
   return (

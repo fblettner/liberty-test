@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Tab, Tabs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Tab, Tabs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -32,7 +32,7 @@ The \`Tabs\` and \`Tab\` components allow navigation between different views or 
 
 ## Example Usage
 \`\`\`tsx
-import { Tab, Tabs } from "liberty-core";
+import { Tab, Tabs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const TabsExample = () => {

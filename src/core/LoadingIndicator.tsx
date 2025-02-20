@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, LoadingIndicator, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, LoadingIndicator, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # LoadingIndicator Component
@@ -21,7 +21,7 @@ The \`LoadingIndicator\` component provides a visual loading state indicator wit
 
 ## Example Usage
 \`\`\`tsx
-import { LoadingIndicator } from "liberty-core";
+import { LoadingIndicator } from '@nomana-it/liberty-core';
 
 export const LoadingIndicatorExample = () => {
   return (

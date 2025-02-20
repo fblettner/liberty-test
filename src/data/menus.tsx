@@ -1,4 +1,4 @@
-import { LYComponentType } from "liberty-core";
+import { LYComponentType } from '@nomana-it/liberty-core';
 import { Core_Alert } from "../core/Alert";
 import { Core_AppsHeader } from "../main/AppsHeader";
 import { Core_Button } from "../core/Button";
@@ -69,7 +69,7 @@ export const menus = {
         },
         {
             "LNG_ID": "en",
-            "MENU_LABEL": "Application",
+            "MENU_LABEL": "Services",
             "MENU_COMPONENT": null,
             "MENU_COMPONENT_ID": null,
             "KEY_ATTRIBUTES": "100001.",

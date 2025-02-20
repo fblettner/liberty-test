@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Skeleton Component
@@ -22,7 +22,7 @@ The \`Skeleton\` component provides a loading placeholder that mimics the shape 
 
 ## Example Usage
 \`\`\`tsx
-import { Skeleton } from "liberty-core";
+import { Skeleton } from '@nomana-it/liberty-core';
 
 export const SkeletonExample = () => {
   return (

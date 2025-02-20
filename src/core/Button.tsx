@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Div_DialogWidgetButtons, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Button, Card, CardContent, Div_DialogWidgetButtons, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Button Component
@@ -31,7 +31,7 @@ It supports different styles, icons, full-width mode, and disabled states.
 
 ## Example Usage
 \`\`\`tsx
-import { Button } from "liberty-core";
+import { Button } from '@nomana-it/liberty-core';
 import { FaCheck } from "react-icons/fa";
 
 export const ButtonExample = () => {

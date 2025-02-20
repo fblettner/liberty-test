@@ -1,6 +1,6 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
-import { useAppContext } from "liberty-core";
-import { EUsers } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
+import { useAppContext } from '@nomana-it/liberty-core';
+import { EUsers } from '@nomana-it/liberty-core';
 import { useEffect, useState } from "react";
 import { getUser } from "../data/user";
 
@@ -32,7 +32,7 @@ The \`Users Configuration\` defines user profiles within the Liberty Framework. 
 
 ## Example Usage
 \`\`\`tsx
-import { useAppContext } from "liberty-core";
+import { useAppContext } from '@nomana-it/liberty-core';
 
 export const UsersExample = () => {
   const { userProperties } = useAppContext();

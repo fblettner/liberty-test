@@ -1,11 +1,9 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
-import { useAppContext } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
+import { useAppContext } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Modules Configuration
 
-## Component Preview
-Below is an interactive example demonstrating how modules are configured in the \`AppProvider\`.
 `;
 
 const markdownContent = `
@@ -22,7 +20,7 @@ The \`Modules\` configuration determines which application features are enabled 
 
 ## Example Usage
 \`\`\`tsx
-import { useAppContext } from "liberty-core";
+import { useAppContext } from '@nomana-it/liberty-core';
 
 export const ModulesExample = () => {
   const { modulesProperties } = useAppContext();

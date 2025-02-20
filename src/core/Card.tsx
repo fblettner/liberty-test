@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button, MarkDown, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button, MarkDown, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Card Component
@@ -43,7 +43,7 @@ The \`Card\` component is a versatile container that can display structured cont
 
 ## Example Usage
 \`\`\`tsx
-import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button } from "liberty-core";
+import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button } from '@nomana-it/liberty-core';
 
 export const CardExample = () => {
   return (

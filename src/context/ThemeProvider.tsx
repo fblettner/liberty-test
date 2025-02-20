@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Theme Configuration
@@ -33,8 +33,8 @@ It provides a dynamic way to **override** and **customize** themes using the **A
 
 ## Example Usage
 \`\`\`tsx
-import { AppProvider, LYThemeProvider } from "liberty-core";
-import { theme } from "liberty-core";
+import { AppProvider, LYThemeProvider } from '@nomana-it/liberty-core';
+import { theme } from '@nomana-it/liberty-core';
 
 export const ThemeExample = () => {
   return (

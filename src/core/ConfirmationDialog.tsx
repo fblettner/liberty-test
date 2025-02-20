@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Button, ConfirmationDialog, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Button, ConfirmationDialog, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -24,7 +24,7 @@ The \`ConfirmationDialog\` component provides a standard confirmation popup with
 
 ## Example Usage
 \`\`\`tsx
-import { ConfirmationDialog, Button } from "liberty-core";
+import { ConfirmationDialog, Button } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const ConfirmationDialogExample = () => {

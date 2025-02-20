@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Tree } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Tree } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Tree Component
@@ -23,7 +23,7 @@ The \`Tree\` component is used to display hierarchical data in an expandable and
 
 ## Example Usage
 \`\`\`tsx
-import { Tree } from "liberty-core";
+import { Tree } from '@nomana-it/liberty-core';
 
 const treeData = [
   { id: "1", label: "Root", children: [

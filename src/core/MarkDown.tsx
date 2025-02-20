@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # MarkDown Component
@@ -20,7 +20,7 @@ The \`MarkDown\` component renders markdown content and supports syntax highligh
 
 ## Example Usage
 \`\`\`tsx
-import { MarkDown } from "liberty-core";
+import { MarkDown } from '@nomana-it/liberty-core';
 
 const markdownText = \`
 # Sample Markdown

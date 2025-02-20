@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, useTheme } from "liberty-core";
-import { LineChart } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, useTheme } from '@nomana-it/liberty-core';
+import { LineChart } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # LineChart Component
@@ -26,7 +26,7 @@ The \`LineChart\` component provides a customizable line chart using Chart.js. I
 
 ## Example Usage
 \`\`\`tsx
-import { LineChart } from "liberty-core";
+import { LineChart } from '@nomana-it/liberty-core';
 
 const dataset = [
   { month: "Jan", sales: 100, revenue: 200 },

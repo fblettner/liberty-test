@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, CircularProgress, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, CircularProgress, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # CircularProgress Component
@@ -22,7 +22,7 @@ The \`CircularProgress\` component displays a rotating loader, commonly used to 
 
 ## Example Usage
 \`\`\`tsx
-import { CircularProgress } from "liberty-core";
+import { CircularProgress } from '@nomana-it/liberty-core';
 
 export const CircularProgressExample = () => {
   return (

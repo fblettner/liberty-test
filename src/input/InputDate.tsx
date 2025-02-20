@@ -1,5 +1,5 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
-import { DatePicker } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
+import { DatePicker } from '@nomana-it/liberty-core';
 import dayjs, { Dayjs } from "dayjs";
 import { useState } from "react";
 
@@ -29,7 +29,7 @@ It supports:
 
 ## Example Usage
 \`\`\`tsx
-import { DatePicker } from "liberty-core";
+import { DatePicker } from '@nomana-it/liberty-core';
 import dayjs, { Dayjs } from "dayjs";
 import { useState } from "react";
 

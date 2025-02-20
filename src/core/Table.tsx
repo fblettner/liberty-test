@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, Table, TableHead, TableBody, TableRow, TableCell, TableSortLabel, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, Table, TableHead, TableBody, TableRow, TableCell, TableSortLabel, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -47,7 +47,7 @@ The \`Table\` component provides a structured way to display data in rows and co
 
 ## Example Usage
 \`\`\`tsx
-import { Table, TableHead, TableBody, TableRow, TableCell, TableSortLabel } from "liberty-core";
+import { Table, TableHead, TableBody, TableRow, TableCell, TableSortLabel } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 export const TableExample = () => {

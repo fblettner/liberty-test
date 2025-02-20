@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # ErrorBoundary Component
@@ -22,7 +22,7 @@ The \`ErrorBoundary\` component is a React class component that catches JavaScri
 
 ## Example Usage
 \`\`\`tsx
-import { ErrorBoundary } from "liberty-core";
+import { ErrorBoundary } from '@nomana-it/liberty-core';
 import { MyComponent } from "./MyComponent";
 
 export const MyApp = () => {

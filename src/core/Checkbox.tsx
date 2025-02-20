@@ -1,4 +1,4 @@
-import { Checkbox, MarkDown, Card, CardContent, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Checkbox, MarkDown, Card, CardContent, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # Checkbox Component
@@ -22,7 +22,7 @@ The \`Checkbox\` component is a custom-styled checkbox that supports indetermina
 
 ## Example Usage
 \`\`\`tsx
-import { Checkbox } from "liberty-core";
+import { Checkbox } from '@nomana-it/liberty-core';
 
 export const CheckboxExample = () => {
   return (

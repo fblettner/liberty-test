@@ -1,4 +1,4 @@
-import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Select } from "liberty-core";
+import { Card, CardContent, Div_DialogWidgetContent, MarkDown, Paper_Dialogs, Select } from '@nomana-it/liberty-core';
 import { useState } from "react";
 
 const markDownPreview = `
@@ -39,7 +39,7 @@ The \`Select\` component provides a dropdown for selecting options, with support
 ## Example Usage
 \`\`\`tsx
 import { useState } from "react";
-import { Select, MenuItem } from "liberty-core";
+import { Select, MenuItem } from '@nomana-it/liberty-core';
 
 export const SelectExample = () => {
   const [value, setValue] = useState(null);

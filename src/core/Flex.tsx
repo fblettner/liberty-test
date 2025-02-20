@@ -1,4 +1,4 @@
-import { Card, CardContent, MarkDown, FlexPanels, Div_DialogWidgetContent, Paper_Dialogs } from "liberty-core";
+import { Card, CardContent, MarkDown, FlexPanels, Div_DialogWidgetContent, Paper_Dialogs } from '@nomana-it/liberty-core';
 
 const markDownPreview = `
 # FlexPanels Component
@@ -22,7 +22,7 @@ The \`FlexPanels\` component is a flexible, resizable layout container that allo
 
 ## Example Usage
 \`\`\`tsx
-import { FlexPanels } from "liberty-core";
+import { FlexPanels } from '@nomana-it/liberty-core';
 
 export const FlexPanelsExample = () => {
   return (
