@@ -297,7 +297,7 @@ export const menus = {
                         {
                             "MENU_LABEL": "Line",
                             "MENU_COMPONENT": LYComponentType.FormsContent,
-                            "MENU_COMPONENT_ID": 70001,
+                            "MENU_COMPONENT_ID": 70002,
                             "KEY_ATTRIBUTES": "100002.100005.100002.",
                             "MENU_PARENT_ID": "100002.100005.",
                             "MENU_CHILD_ID": "100002.100005.100002.",
@@ -308,7 +308,7 @@ export const menus = {
                         {
                             "MENU_LABEL": "Pie",
                             "MENU_COMPONENT": LYComponentType.FormsContent,
-                            "MENU_COMPONENT_ID": 70001,
+                            "MENU_COMPONENT_ID": 70003,
                             "KEY_ATTRIBUTES": "100002.100005.100003.",
                             "MENU_PARENT_ID": "100002.100005.",
                             "MENU_CHILD_ID": "100002.100005.100003.",
