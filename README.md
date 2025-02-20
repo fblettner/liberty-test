@@ -11,6 +11,9 @@ This repository contains an application for testing all components and how to us
 - 🛠️ **Type Definitions**: Predefined TypeScript types for consistent data handling.
 - 🔌 **Easy Integration**: Works seamlessly with any React project.
 
+## Try It Online!
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/fblettner/liberty-test)
+
 ## **Installation**
 To install **Liberty Core**, run the following command:
 
