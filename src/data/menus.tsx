@@ -53,6 +53,7 @@ import { Core_ErrorBoundary } from "../context/ErrorBoundary";
 import { Core_TranslationProvider } from "../context/I18nextProvider";
 import { Core_CreateApp } from "../components/Create";
 import { Core_FormsTable } from '../liberty-grid/AdvancedGrid';
+import { Core_APIDocumentation } from '../api/APIDoc';
 
 export const menus = {
     "items": [
@@ -423,7 +424,18 @@ export const menus = {
                     "MENU_CONTENT": <Core_FormsTable />
                 },                   
             ]
-        },             
+        },          
+        {
+            "MENU_LABEL": "API",
+            "MENU_COMPONENT": LYComponentType.FormsContent,
+            "MENU_COMPONENT_ID": 80001,
+            "KEY_ATTRIBUTES": "100005.",
+            "MENU_PARENT_ID": "0",
+            "MENU_CHILD_ID": "100005.",
+            "MENU_LEVEL": 2,
+            "AUT_RUN": "Y",
+            "MENU_CONTENT": <Core_APIDocumentation />
+        }   
     ],
     status: "success"
 };
