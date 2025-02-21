@@ -52,6 +52,7 @@ import { Core_AppsUser } from "../main/AppsUsers";
 import { Core_ErrorBoundary } from "../context/ErrorBoundary";
 import { Core_TranslationProvider } from "../context/I18nextProvider";
 import { Core_CreateApp } from "../components/Create";
+import { Core_FormsTable } from '../liberty-grid/AdvancedGrid';
 
 export const menus = {
     "items": [
@@ -409,7 +410,18 @@ export const menus = {
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_Dashboard />
-                },                
+                },   
+                {
+                    "MENU_LABEL": "Advanced Grid",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 70002,
+                    "KEY_ATTRIBUTES": "100004.100002.",
+                    "MENU_PARENT_ID": "100004.",
+                    "MENU_CHILD_ID": "100004.100002.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_FormsTable />
+                },                   
             ]
         },             
     ],

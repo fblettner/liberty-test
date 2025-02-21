@@ -8,20 +8,6 @@ export default defineConfig({
   server: {
     open: true,
     cors: { origin: "*" },
-    proxy: {
-      '/api': {
-        target: "http://localhost:8000",
-        changeOrigin: true,
-      },
-      '/socket.io': {
-        target: "ws://localhost:8000",
-        changeOrigin: true,
-      },
-      '/socket': {
-        target: "http://localhost:8000",
-        changeOrigin: true,
-      },
-    }
   },
   build: {
     outDir: "build",
