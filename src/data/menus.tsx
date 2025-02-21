@@ -54,6 +54,8 @@ import { Core_TranslationProvider } from "../context/I18nextProvider";
 import { Core_CreateApp } from "../components/Create";
 import { Core_FormsTable } from '../liberty-grid/AdvancedGrid';
 import { Core_APIDocumentation } from '../api/APIDoc';
+import { Core_FormsList } from '../liberty-grid/AdvancedList';
+import { Core_FormsUpload } from '../liberty-grid/Upload';
 
 export const menus = {
     "items": [
@@ -422,7 +424,29 @@ export const menus = {
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_FormsTable />
-                },                   
+                },   
+                {
+                    "MENU_LABEL": "Advanced List",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 70003,
+                    "KEY_ATTRIBUTES": "100004.100003.",
+                    "MENU_PARENT_ID": "100004.",
+                    "MENU_CHILD_ID": "100004.100003.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_FormsList />
+                },                                
+                {
+                    "MENU_LABEL": "Upload Table",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 70004,
+                    "KEY_ATTRIBUTES": "100004.100004.",
+                    "MENU_PARENT_ID": "100004.",
+                    "MENU_CHILD_ID": "100004.100004.",
+                    "MENU_LEVEL": 2,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_FormsUpload />
+                },                     
             ]
         },          
         {

@@ -20,7 +20,7 @@ export const tableProperties = {
             },
         ],
         "TBL_EDITABLE": true,
-        "TBL_UPLOADABLE": false,
+        "TBL_UPLOADABLE": true,
         "TBL_TREE_ID": null,
         "TBL_FRM_ID": null,
         "FRM_LABEL": "Security - Users",

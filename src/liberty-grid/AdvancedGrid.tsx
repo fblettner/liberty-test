@@ -110,7 +110,7 @@ import {
       id: 1,
       label: "User Management",
       filters: [],
-      componentMode: LYComponentMode.edit,
+      componentMode: LYComponentMode.find,
       showPreviousButton: false,
       isChildren: false,
       type: LYComponentType.FormsTable
