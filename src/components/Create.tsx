@@ -21,7 +21,7 @@ cd my-liberty-app
 Then, install the required dependencies:
 
 \`\`\`sh
-npm install liberty-core react-oidc-context @mui/material @emotion/react @emotion/styled
+npm install liberty-core react-oidc-context @emotion/react @emotion/styled
 \`\`\`
 
 ---

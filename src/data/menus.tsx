@@ -56,6 +56,8 @@ import { Core_FormsTable } from '../liberty-grid/AdvancedGrid';
 import { Core_APIDocumentation } from '../api/APIDoc';
 import { Core_FormsList } from '../liberty-grid/AdvancedList';
 import { Core_FormsUpload } from '../liberty-grid/Upload';
+import { Core_StyledDivDocumentation } from '../styled/Div';
+import { Core_StyledButtonDocumentation } from '../styled/Button';
 
 export const menus = {
     "items": [
@@ -448,14 +450,49 @@ export const menus = {
                     "MENU_CONTENT": <Core_FormsUpload />
                 },                                    
             ]
-        },          
+        },   
         {
-            "MENU_LABEL": "API Endpoints",
+            "MENU_LABEL": "Styled Elements",
             "MENU_COMPONENT": LYComponentType.FormsContent,
-            "MENU_COMPONENT_ID": 80001,
+            "MENU_COMPONENT_ID": null,
             "KEY_ATTRIBUTES": "100005.",
             "MENU_PARENT_ID": "0",
             "MENU_CHILD_ID": "100005.",
+            "MENU_LEVEL": 2,
+            "AUT_RUN": "Y",
+            "children": [ 
+                {
+                    "MENU_LABEL": "Button",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80001,
+                    "KEY_ATTRIBUTES": "100005.10001.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10001.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledButtonDocumentation />
+                },
+                {
+                "MENU_LABEL": "Div",
+                "MENU_COMPONENT": LYComponentType.FormsContent,
+                "MENU_COMPONENT_ID": 80002,
+                "KEY_ATTRIBUTES": "100005.10002.",
+                "MENU_PARENT_ID": "0",
+                "MENU_CHILD_ID": "100005.10002.",
+                "MENU_LEVEL": 3,
+                "AUT_RUN": "Y",
+                "MENU_CONTENT": <Core_StyledDivDocumentation />
+                },
+
+            ]
+        },              
+        {
+            "MENU_LABEL": "API Endpoints",
+            "MENU_COMPONENT": LYComponentType.FormsContent,
+            "MENU_COMPONENT_ID": 90001,
+            "KEY_ATTRIBUTES": "100006.",
+            "MENU_PARENT_ID": "0",
+            "MENU_CHILD_ID": "100006.",
             "MENU_LEVEL": 2,
             "AUT_RUN": "Y",
             "MENU_CONTENT": <Core_APIDocumentation />
