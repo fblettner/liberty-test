@@ -14,7 +14,7 @@ import { theme } from './data/theme';
 import { getDashboard } from './data/dashboard';
 import { setLookup } from './data/lookup';
 import { setEnums } from './data/enum';
-import { getTableProperties, getTableData } from "./liberty-grid/tableProperties";
+import { getTableProperties, getTableData } from "./data/tableProperties";
 
 
 export function App() {

@@ -446,11 +446,11 @@ export const menus = {
                     "MENU_LEVEL": 2,
                     "AUT_RUN": "Y",
                     "MENU_CONTENT": <Core_FormsUpload />
-                },                     
+                },                                    
             ]
         },          
         {
-            "MENU_LABEL": "API",
+            "MENU_LABEL": "API Endpoints",
             "MENU_COMPONENT": LYComponentType.FormsContent,
             "MENU_COMPONENT_ID": 80001,
             "KEY_ATTRIBUTES": "100005.",

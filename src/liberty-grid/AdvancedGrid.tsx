@@ -102,7 +102,59 @@ import {
   \`\`\`
   
   This ensures that the \`FormsTable\` dynamically receives its configuration and data.
+
+  ---
+
+  # Table Properties Documentation
   
+  ## Overview
+  The **Table Properties** define the structure, behavior, and metadata associated with a **FormsTable** component.
+  
+  These properties control:
+  - **Database Connection & Queries**: Identifying the table and its associated query.
+  - **User Interaction**: Editable, uploadable, and searchable capabilities.
+  - **Column Properties**: Data types, validation rules, and visibility settings.
+  
+    ## **Table Metadata Schema**
+  Each table has the following properties:
+  
+  | Property | Type | Description |
+  |----------|------|-------------|
+  | \`TBL_ID\` | number | Unique identifier for the table. |
+  | \`TBL_LABEL\` | text | A user-friendly description of the table. |
+  | \`TBL_DB_NAME\` | text | The database name where the table resides. |
+  | \`TBL_QUERY_ID\` | number | The query ID associated with the table. |
+  | \`TBL_EDITABLE\` | boolean | Defines if the table is editable. |
+  | \`TBL_UPLOADABLE\` | boolean | Specifies if the table allows data uploads. |
+  | \`TBL_AUDIT\` | boolean | Enables auditing for the table. |
+  | \`TBL_CTX_ID\` | number | Context ID linking the table to specific menus. |
+  | \`TBL_TREE_ID\` | number | Defines if the table follows a hierarchical structure. |
+  | \`TBL_FRM_ID\` | number | Links the table to a predefined form for UI interaction. |
+  | \`TBL_AUTO_LOAD\` | boolean | Enables automatic data loading on startup. |
+  | \`TBL_BURST\` | boolean | Allows burst data export. |
+  | \`TBL_WORKBOOK\` | text | Associates a workbook for data reporting. |
+  
+  ---
+  
+  ## **Column Properties Schema**
+  Each table consists of multiple columns, each having a specific role.
+  
+  | Property | Type | Description |
+  |----------|------|-------------|
+  | \`COL_ID\` | number | Unique identifier for the column. |
+  | \`COL_SEQ\` | number | Specifies column order. |
+  | \`COL_LABEL\` | text | Display name of the column. |
+  | \`COL_TARGET\` | text | Database field mapped to the column. |
+  | \`COL_TYPE\` | text | Defines the data type (text, number, boolean, date). |
+  | \`COL_RULES\` | text | Validation rules applied to the column. |
+  | \`COL_RULES_VALUES\` | text | Acceptable values for validation. |
+  | \`COL_DEFAULT\` | text | Default value assigned if empty. |
+  | \`COL_KEY\` | boolean | Identifies if this column is a primary key. |
+  | \`COL_VISIBLE\` | boolean | Controls if the column is visible in the UI. |
+  | \`COL_DISABLED\` | boolean | Disables column editing. |
+  | \`COL_REQUIRED\` | boolean | Marks the column as mandatory. |
+  | \`COL_FILTER\` | boolean | Specifies if the column is used for filtering. |
+  | \`COL_CDN_ID\` | number | ID used for conditional display logic. |
   `;
   
   export const Core_FormsTable = () => {
