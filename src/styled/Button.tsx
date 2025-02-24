@@ -14,9 +14,9 @@ The \`Button\` component in Liberty Core is a styled button that provides consis
 ## Props
 | Prop             | Type               | Default  | Description                                   |
 |-----------------|-------------------|----------|-----------------------------------------------|
-| \`variant\`  | \`"text" | "contained" | "outlined"\` | \`"text"\` | Defines the button's appearance. |
+| \`variant\`  | \`"text", "contained", "outlined"\` | \`"text"\` | Defines the button's appearance. |
 | \`disabled\` | \`boolean\` | \`false\` | Disables the button when set to true. |
-| \`size\` | \`"small" | "medium" | "large"\` | \`"medium"\` | Defines the size of the button. |
+| \`size\` | \`"small", "medium", "large"\` | \`"medium"\` | Defines the size of the button. |
 | \`onClick\` | \`() => void\` | \`undefined\` | Callback function triggered when clicked. |
 
 ## Example Usage

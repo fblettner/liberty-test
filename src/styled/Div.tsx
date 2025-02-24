@@ -18,11 +18,11 @@ The \`Div\` component is a styled wrapper based on \`styled.div\` from Emotion. 
 | \`flexDirection\`  | \`'row' | 'row-reverse' | 'column' | 'column-reverse'\` | \`undefined\` | Sets the flex direction when using flexbox. |
 | \`justifyContent\` | \`string\` | \`undefined\` | Aligns children within the div along the main axis. |
 | \`alignItems\` | \`string\` | \`undefined\` | Aligns children within the div along the cross-axis. |
-| \`gap\` | \`string | number\` | \`undefined\` | Specifies the spacing between child elements. |
-| \`padding\` | \`string | number\` | \`undefined\` | Defines padding inside the div. |
-| \`margin\` | \`string | number\` | \`undefined\` | Defines margin outside the div. |
-| \`position\` | \`'static' | 'relative' | 'absolute' | 'fixed' | 'sticky'\` | \`undefined\` | Sets the CSS positioning of the div. |
-| \`width\` | \`string | number\` | \`undefined\` | Defines the width of the div. |
+| \`gap\` | \`string, number\` | \`undefined\` | Specifies the spacing between child elements. |
+| \`padding\` | \`string, number\` | \`undefined\` | Defines padding inside the div. |
+| \`margin\` | \`string, number\` | \`undefined\` | Defines margin outside the div. |
+| \`position\` | \`'static', 'relative', 'absolute', 'fixed', 'sticky'\` | \`undefined\` | Sets the CSS positioning of the div. |
+| \`width\` | \`string, number\` | \`undefined\` | Defines the width of the div. |
 | \`elevation\` | \`number\` | \`0\` | Applies Material-like shadow elevation to the div (0-5 levels supported). |
 
 ## Example Usage

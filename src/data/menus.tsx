@@ -58,6 +58,21 @@ import { Core_FormsList } from '../liberty-grid/AdvancedList';
 import { Core_FormsUpload } from '../liberty-grid/Upload';
 import { Core_StyledDivDocumentation } from '../styled/Div';
 import { Core_StyledButtonDocumentation } from '../styled/Button';
+import { Core_StyledCardDocumentation } from '../styled/Card';
+import { Core_StyledDialogDocumentation } from '../styled/Dialog';
+import { Core_StyledFormDocumentation } from '../styled/Form';
+import { Core_GlobalStylesDocumentation } from '../styled/GlobalStyles';
+import { Core_StyledIconButtonDocumentation } from '../styled/IconButton';
+import { Core_IconDocumentation } from '../styled/Icons';
+import { Core_StyledInputDocumentation } from '../styled/Input';
+import { Core_StyledListDocumentation } from '../styled/List';
+import { Core_StyledMainDocumentation } from '../styled/Main';
+import { Core_StyledMenuDocumentation } from '../styled/Menus';
+import { Core_StyledPaperDocumentation } from '../styled/Paper';
+import { Core_StyledStackDocumentation } from '../styled/Stack';
+import { Core_StyledTableDocumentation } from '../styled/Table';
+import { Core_StyledTabsDocumentation } from '../styled/Tabs';
+import { Core_StyledTypographyDocumentation } from '../styled/Typography';
 
 export const menus = {
     "items": [
@@ -473,17 +488,181 @@ export const menus = {
                     "MENU_CONTENT": <Core_StyledButtonDocumentation />
                 },
                 {
-                "MENU_LABEL": "Div",
-                "MENU_COMPONENT": LYComponentType.FormsContent,
-                "MENU_COMPONENT_ID": 80002,
-                "KEY_ATTRIBUTES": "100005.10002.",
-                "MENU_PARENT_ID": "0",
-                "MENU_CHILD_ID": "100005.10002.",
-                "MENU_LEVEL": 3,
-                "AUT_RUN": "Y",
-                "MENU_CONTENT": <Core_StyledDivDocumentation />
+                    "MENU_LABEL": "Card",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80002,
+                    "KEY_ATTRIBUTES": "100005.10002.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10002.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledCardDocumentation />
                 },
-
+                {
+                    "MENU_LABEL": "Dialog",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80003,
+                    "KEY_ATTRIBUTES": "100005.10003.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10003.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledDialogDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Div",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80004,
+                    "KEY_ATTRIBUTES": "100005.10004.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10004.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledDivDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Form",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80005,
+                    "KEY_ATTRIBUTES": "100005.10005.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10005.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledFormDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Global Styles",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80006,
+                    "KEY_ATTRIBUTES": "100005.10006.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10006.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_GlobalStylesDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Icon Button",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80007,
+                    "KEY_ATTRIBUTES": "100005.10007.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10007.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledIconButtonDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Icons",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80008,
+                    "KEY_ATTRIBUTES": "100005.10008.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10008.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_IconDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Input",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80009,
+                    "KEY_ATTRIBUTES": "100005.10009.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10009.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledInputDocumentation />
+                },
+                {
+                    "MENU_LABEL": "List",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80010,
+                    "KEY_ATTRIBUTES": "100005.10010.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10010.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledListDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Main",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80011,
+                    "KEY_ATTRIBUTES": "100005.10011.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10011.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledMainDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Menus",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80012,
+                    "KEY_ATTRIBUTES": "100005.10012.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10012.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledMenuDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Paper",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80013,
+                    "KEY_ATTRIBUTES": "100005.10013.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10013.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledPaperDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Stack",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80014,
+                    "KEY_ATTRIBUTES": "100005.10014.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10014.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledStackDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Table",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80015,
+                    "KEY_ATTRIBUTES": "100005.10015.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10015.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledTableDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Tabs",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80016,
+                    "KEY_ATTRIBUTES": "100005.10016.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10016.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledTabsDocumentation />
+                },
+                {
+                    "MENU_LABEL": "Typography",
+                    "MENU_COMPONENT": LYComponentType.FormsContent,
+                    "MENU_COMPONENT_ID": 80017,
+                    "KEY_ATTRIBUTES": "100005.10017.",
+                    "MENU_PARENT_ID": "0",
+                    "MENU_CHILD_ID": "100005.10017.",
+                    "MENU_LEVEL": 3,
+                    "AUT_RUN": "Y",
+                    "MENU_CONTENT": <Core_StyledTypographyDocumentation />
+                },
             ]
         },              
         {
